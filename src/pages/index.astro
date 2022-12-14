@@ -1,81 +1,94 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+// layouts
+import Layout from "../layouts/Layout.astro";
+
+// components
+import { Image } from "@astrojs/image/components";
+import ListItem from "@/components/ListItem";
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
-</Layout>
+<Layout>
+    <section class="relative overflow-hidden bg-zinc-100 pt-16 md:pt-20 xl:pt-32">
+        <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+            <div class="mx-auto max-w-lg pb-14 md:mx-0 md:max-w-none md:pb-48 lg:pb-52 xl:max-w-xl xl:pb-14">
+                <h1
+                    class="text-5xl font-extrabold leading-tighter text-zinc-900 md:mx-auto md:max-w-2xl md:text-center xl:mx-0 xl:text-left xl:text-6xl xl:leading-tighter"
+                >
+                    I'm a mobile powersport mechanic.
+                </h1>
+                <ul
+                    class="mt-6 flex flex-col space-y-4 md:mx-auto md:mt-8 md:max-w-3xl md:flex-row md:space-y-0 md:space-x-2 lg:space-x-4 xl:mx-0 xl:flex-col xl:space-y-4 xl:space-x-0"
+                >
+                    <ListItem>Serving Dripping Springs since 2005.</ListItem>
+                    <ListItem>Full service repair, at your door.</ListItem>
+                    <ListItem>I'm a factory certified repair technician.</ListItem>
+                </ul>
+                <div class="mt-10 flex flex-col sm:flex-row sm:space-x-5 md:mt-12 md:justify-center xl:justify-start">
+                    <a
+                        href="signup.html"
+                        class="group inline-flex w-full items-center justify-center bg-zinc-700 px-6 py-3 text-base font-medium text-white duration-150 ease-in-out hover:bg-zinc-900 sm:w-auto xl:px-7 xl:py-4 xl:text-lg"
+                        >Get an Estimate</a
+                    >
 
-<style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
-</style>
+                    <a
+                        href="pricing.html"
+                        class="group mt-3.5 inline-flex w-full items-center justify-center border border-zinc-800 px-6 py-3 text-base font-medium text-zinc-800 duration-150 ease-in-out hover:bg-zinc-800 hover:text-white sm:mt-0 sm:w-auto xl:px-7 xl:py-4 xl:text-lg"
+                        >(800) 532-3343</a
+                    >
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-gradient-to-r from-vanilla via-zinc-50 to-zinc-100">
+            <div class="relative mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+                <div
+                    class="mx-auto max-w-lg pt-20 pb-8 pl-4 md:mx-0 md:max-w-md lg:max-w-lg lg:pt-28 lg:pb-16 xl:max-w-xl xl:py-12 xl:pl-14 2xl:pl-0"
+                >
+                    <blockquote>
+                        <div class="relative leading-relaxed text-zinc-700 xl:text-lg">
+                            <svg
+                                class="absolute left-0 -top-12 h-8 w-8 transform text-gray-secondary-200 xl:top-0 xl:-left-5 xl:-translate-x-full xl:-translate-y-2"
+                                height="48"
+                                width="48"
+                                viewBox="0 0 48 48"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <g>
+                                    <path
+                                        d="M21.66145,33.81676c0,4.29661-3.96109,8.22346-8.91304,8.22346C4.56585,42.04022,1,35.98671,1,27.90615 c0-9.27484,9.34862-18.21943,17.83035-21.94637l2.26574,3.64916C14.10766,12.9954,8.88433,17.58691,8.14413,25.28492h2.89106 c3.09587,0,6.31198,0.4991,8.45903,2.72402C21.02498,29.59761,21.66145,31.62025,21.66145,33.81676z M47,33.81676 c0,4.29661-3.96109,8.22346-8.91304,8.22346c-8.18256,0-11.74842-6.05352-11.74842-14.13408 c0-9.27484,9.34862-18.21943,17.83035-21.94637l2.26574,3.64916c-6.98843,3.38646-12.21176,7.97797-12.95195,15.67598 c3.15316,0,5.76908-0.11425,8.09925,0.71955C45.21084,27.30299,47,30.10812,47,33.81676z"
+                                        fill="currentColor"></path>
+                                </g>
+                            </svg>
+
+                            <p class="relative">
+                                Chris was awesome. He's always on schedule and is always very reasonably priced and helpful. If my bike ever needs
+                                work, he will be hearing from me.
+                            </p>
+                        </div>
+                        <div class="mt-7 flex items-center">
+                            <div class="h-14 w-14 rounded-full bg-gray-secondary-100">
+                                <Image
+                                    class="h-full w-full rounded-full object-cover object-center"
+                                    width="100"
+                                    height="100"
+                                    src="../src/assets/images/testimonial.jpg"
+                                    alt="DS Powersports testimonial"
+                                />
+                            </div>
+                            <div class="ml-5">
+                                <p class="font-medium text-zinc-900">Josh W.</p>
+
+                                <p class="font-light text-zinc-500">Manchaca, TX</p>
+                            </div>
+                        </div>
+                    </blockquote>
+                </div>
+                <div
+                    class="absolute bottom-0 right-6 hidden w-1/3 bg-gray-secondary-100 md:block lg:right-12 xl:-right-0 xl:w-full xl:max-w-xl 2xl:-right-32 2xl:max-w-[640px]"
+                >
+                    <Image src="../src/assets/images/hero.jpg" width="600" height="800" class="h-auto w-full object-cover" alt="Home Hero Image" />
+                </div>
+            </div>
+        </div>
+    </section>
+</Layout>
