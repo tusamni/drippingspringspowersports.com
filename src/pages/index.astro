@@ -33,7 +33,7 @@ import ListItem from "@/components/ListItem";
 
                     <a
                         href="pricing.html"
-                        class="group mt-3.5 inline-flex w-full items-center justify-center border border-zinc-800 px-6 py-3 text-base font-medium text-zinc-800 duration-150 ease-in-out hover:bg-zinc-800 hover:text-white sm:mt-0 sm:w-auto xl:px-7 xl:py-4 xl:text-lg"
+                        class="group mt-3.5 inline-flex w-full items-center justify-center border border-zinc-800 px-6 py-3 text-base font-medium text-zinc-800 duration-150 ease-in-out hover:bg-zinc-50 hover:text-zinc-700 sm:mt-0 sm:w-auto xl:px-7 xl:py-4 xl:text-lg"
                         >(800) 532-3343</a
                     >
                 </div>
@@ -110,42 +110,444 @@ import ListItem from "@/components/ListItem";
     </section>
 
     <!-- Feature Blocks -->
-    <section class="relative overflow-hidden bg-vanilla pt-32 pb-20 lg:pt-24 lg:pb-28">
+    <section class="relative overflow-hidden bg-zinc-50 pt-32 pb-20 lg:pt-24 lg:pb-28">
         <!-- Container -->
         <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
-            <!-- Block 2 -->
+            <!-- Block 1 -->
             <div class="relative mx-auto w-full max-w-lg sm:max-w-xl lg:mx-0 lg:max-w-none">
                 <!-- Image with Stats -->
-                <div class="right-0 top-1/2 z-10 w-full lg:absolute lg:w-1/2 lg:-translate-y-1/2">
-                    <Image src={import("../assets/images/repair.jpg")} width="608" height="405" class="h-auto w-full" />
+                <div class="left-0 top-1/2 z-10 w-full lg:absolute lg:w-1/2 lg:-translate-y-1/2">
+                    <Image src={import("../assets/images/repair.jpg")} width="600" height="400" class="h-auto w-full" />
                     <div
-                        class="absolute left-0 top-0 w-64 -translate-y-24 bg-gray-secondary-100/95 p-6 backdrop-blur-sm sm:py-7 lg:right-0 lg:top-[unset] lg:left-[unset] lg:bottom-0 lg:translate-y-24 2xl:translate-x-16"
+                        class="absolute right-0 top-0 w-64 -translate-y-24 bg-zinc-100/95 p-6 backdrop-blur-sm sm:py-7 lg:left-0 lg:top-[unset] lg:bottom-0 lg:translate-y-24 2xl:-translate-x-16"
                     >
-                        <p class="text-4xl font-semibold text-slate-900 xl:text-5xl">3M+</p>
-                        <p class="mt-5 text-slate-700">Listeners across podcasts using Waves</p>
+                        <p class="text-4xl font-semibold text-zinc-900 xl:text-5xl">1000+</p>
+                        <p class="mt-5 text-zinc-700">Podcasters use Waves to power their podcast</p>
                     </div>
                 </div>
 
                 <!-- Content -->
-                <div
-                    class="w-full border border-gray-secondary-400/60 bg-gray-secondary-50 px-6 py-10 sm:p-14 lg:w-7/12 lg:py-32 lg:pr-28 xl:pl-16 xl:pr-36"
-                >
-                    <h2 class="text-4xl font-semibold leading-tight text-slate-900 xl:text-5xl xl:leading-tight">
-                        Serving our clients for 17 years running
+                <div class="w-full border border-zinc-400/60 bg-zinc-50 px-6 py-10 sm:p-14 lg:ml-auto lg:w-7/12 lg:py-32 lg:pl-28 xl:pl-36 xl:pr-20">
+                    <h2 class="text-4xl font-semibold leading-tight text-zinc-900 xl:text-5xl xl:leading-tight">
+                        Serving our clients for 17 years running.
                     </h2>
-                    <p class="mt-6 leading-relaxed text-slate-700 sm:mt-8 sm:text-lg sm:leading-8">
-                        Lorem ipsum dolor sit amet orci aliquam porta adipiscing elementum purus netus laoreet pulvinar. Vestibulum platea iaculis eu
-                        ac netus lobortis porta sodales urna mollis ac. Elit viverra magna euismod aenean diam ullamcorper eu nec venenatis. Eleifend
-                        lacinia luctus sagittis hendrerit habitasse cras dapibus.
+                    <p class="mt-6 leading-relaxed text-zinc-700 sm:mt-8 sm:text-lg sm:leading-8">
+                        I'm factory certified with years of professional experience. From area dealerships to managing race machines in AMA's National
+                        MX Series, my background ensures a positive experience for my clients all over the Austin area.
                     </p>
-                    <a
-                        href="about.html"
-                        class="group mt-10 inline-flex items-center justify-center border border-slate-800 px-5 py-2.5 text-base font-medium text-slate-800 duration-150 ease-in-out hover:bg-slate-800 hover:text-white sm:mt-12"
-                    >
-                        Learn more
-                    </a>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- FAQ Section -->
+    <section class="overflow-hidden bg-zinc-50 pb-64 md:pt-24 md:pb-32">
+        <!-- Container -->
+        <div class="relative mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+            <Image
+                src={import("../assets/images/square.jpg")}
+                width="650"
+                height="650"
+                class="absolute left-0 right-0 h-80 w-full object-cover object-center md:right-6 md:left-[unset] md:h-auto md:w-1/2 lg:right-8"
+            />
+
+            <div class="relative z-10 translate-y-48 md:w-4/5 md:translate-y-12 lg:w-2/3">
+                <div class="border border-zinc-400/60 bg-zinc-50 px-8 py-12 sm:py-16 sm:px-12 lg:px-16 lg:py-20">
+                    <h2 class="text-4xl font-semibold leading-tight text-zinc-900 sm:text-5xl sm:leading-tight">Frequently asked questions</h2>
+
+                    <!-- FAQs -->
+                    <ul class="mt-12 space-y-8 divide-y divide-gray-secondary-400/75 sm:mt-16">
+                        <!-- Question / Answer 1 -->
+                        <li x-data={"{ open: false }"}>
+                            <!-- Question -->
+                            <button class="flex w-full items-center justify-between" x-on:click="open = !open">
+                                <p class="text-left text-lg font-semibold text-zinc-900 sm:text-xl">How do I book an appointment?</p>
+                                <span
+                                    class="relative ml-4 flex h-4 w-4 duration-300 before:absolute before:bottom-1/2 before:h-0.5 before:-translate-y-1/2 before:rotate-90 before:bg-zinc-800 before:transition-[width] before:content-[''] after:absolute after:bottom-1/2 after:h-0.5 after:w-4 after:-translate-y-1/2 after:bg-zinc-800 after:content-[''] sm:h-[18px] sm:w-[18px] sm:after:w-[18px]"
+                                    x-bind:class="open ? 'before:w-0 rotate-0' : 'sm:before:w-[18px] before:w-4 rotate-180'"></span>
+                            </button>
+
+                            <!-- Answer -->
+                            <div
+                                class="relative max-h-0 overflow-hidden duration-500"
+                                x-ref="question1"
+                                x-bind:style="open ? 'max-height: ' + $refs.question1.scrollHeight + 'px' : ''"
+                            >
+                                <div class="px-1 pt-5 text-base leading-relaxed text-zinc-700 sm:text-lg sm:leading-relaxed">
+                                    Lorem ipsum dolor sit amet vestibulum nullam bibendum. Odio velit curabitur purus tortor laoreet massa diam
+                                    blandit pulvinar duis ornare. Interdum vestibulum molestie lacinia maecenas tortor lacus nibh pretium faucibus do.
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- Question / Answer 2 -->
+                        <li class="pt-8" x-data={"{ open: false }"}>
+                            <!-- Question -->
+                            <button class="flex w-full items-center justify-between" x-on:click="open = !open">
+                                <p class="text-left text-lg font-semibold text-zinc-900 sm:text-xl">How does your pricing work?</p>
+                                <span
+                                    class="relative ml-4 flex h-4 w-4 duration-300 before:absolute before:bottom-1/2 before:h-0.5 before:-translate-y-1/2 before:rotate-90 before:bg-zinc-800 before:transition-[width] before:content-[''] after:absolute after:bottom-1/2 after:h-0.5 after:w-4 after:-translate-y-1/2 after:bg-zinc-800 after:content-[''] sm:h-[18px] sm:w-[18px] sm:after:w-[18px]"
+                                    x-bind:class="open ? 'before:w-0 rotate-0' : 'sm:before:w-[18px] before:w-4 rotate-180'"></span>
+                            </button>
+
+                            <!-- Answer -->
+                            <div
+                                class="relative max-h-0 overflow-hidden duration-500"
+                                x-ref="question1"
+                                x-bind:style="open ? 'max-height: ' + $refs.question1.scrollHeight + 'px' : ''"
+                            >
+                                <div class="px-1 pt-5 text-base leading-relaxed text-zinc-700 sm:text-lg sm:leading-relaxed">
+                                    Lorem ipsum dolor sit amet vestibulum nullam bibendum. Odio velit curabitur purus tortor laoreet massa diam
+                                    blandit pulvinar duis ornare. Interdum vestibulum molestie lacinia maecenas tortor lacus nibh pretium faucibus do.
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- Question / Answer 3 -->
+                        <li class="pt-8" x-data={"{ open: false }"}>
+                            <!-- Question -->
+                            <button class="flex w-full items-center justify-between" x-on:click="open = !open">
+                                <p class="text-left text-lg font-semibold text-zinc-900 sm:text-xl">Can I get a repair estimate?</p>
+                                <span
+                                    class="relative ml-4 flex h-4 w-4 duration-300 before:absolute before:bottom-1/2 before:h-0.5 before:-translate-y-1/2 before:rotate-90 before:bg-zinc-800 before:transition-[width] before:content-[''] after:absolute after:bottom-1/2 after:h-0.5 after:w-4 after:-translate-y-1/2 after:bg-zinc-800 after:content-[''] sm:h-[18px] sm:w-[18px] sm:after:w-[18px]"
+                                    x-bind:class="open ? 'before:w-0 rotate-0' : 'sm:before:w-[18px] before:w-4 rotate-180'"></span>
+                            </button>
+
+                            <!-- Answer -->
+                            <div
+                                class="relative max-h-0 overflow-hidden duration-500"
+                                x-ref="question1"
+                                x-bind:style="open ? 'max-height: ' + $refs.question1.scrollHeight + 'px' : ''"
+                            >
+                                <div class="px-1 pt-5 text-base leading-relaxed text-zinc-700 sm:text-lg sm:leading-relaxed">
+                                    Lorem ipsum dolor sit amet vestibulum nullam bibendum. Odio velit curabitur purus tortor laoreet massa diam
+                                    blandit pulvinar duis ornare. Interdum vestibulum molestie lacinia maecenas tortor lacus nibh pretium faucibus do.
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Cards -->
+    <section class="relative mt-72 overflow-hidden bg-zinc-100 pt-16 sm:pt-24">
+        <!-- Header -->
+        <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+            <div class="mx-auto flex max-w-lg flex-col items-center sm:max-w-xl md:max-w-2xl lg:mx-0 lg:max-w-none">
+                <h1
+                    class="text-center text-4xl font-semibold leading-snug text-slate-900 sm:text-5xl sm:leading-snug md:mx-auto md:max-w-4xl xl:mx-0"
+                >
+                    Pricing
+                </h1>
+                <p class="mx-auto mt-5 max-w-xl text-center text-lg leading-relaxed text-slate-700 sm:mt-6">
+                    Lorem ipsum dolor sit amet dapibus fusce sed. Aliquet porta bibendum est platea fermentum tempus egestas. Luctus volutpat mauris
+                    quisque dictum et rhoncus habitasse.
+                </p>
+            </div>
+        </div>
+
+        <div class="relative bg-zinc-100 pt-20">
+            <!-- Cards Container -->
+            <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+                <!-- Cards -->
+                <div
+                    class="relative mx-auto grid max-w-lg divide-x-0 divide-y divide-gray-secondary-400/75 border border-gray-secondary-400/60 sm:max-w-xl md:max-w-2xl lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:divide-x lg:divide-y-0"
+                >
+                    <!-- Pricing tier 1 -->
+                    <div class="bg-gray-secondary-50 p-8 sm:p-10">
+                        <h3 class="text-lg font-semibold text-slate-900">Service Fee</h3>
+                        <p class="mt-4 text-slate-600">Our service fee covers all trips related to the original visit.</p>
+                        <p class="mt-12">
+                            <span class="text-4xl font-semibold text-slate-900"> $95</span>
+                            <span class="ml-2.5 text-lg font-medium text-slate-500"> / repair</span>
+                        </p>
+                        <a
+                            href="signup.html"
+                            class="group mt-8 inline-flex w-full items-center justify-center bg-slate-700 px-6 py-3 text-base font-medium text-white duration-150 ease-in-out hover:bg-slate-900 xl:px-7 xl:py-4 xl:text-lg"
+                        >
+                            Try free for 30 days
+                        </a>
+                        <p class="mt-3.5 text-center text-sm text-slate-500">No credit card required</p>
+                        <hr class="border-gray-secondary-400/35 my-10" />
+                        <p class="font-medium text-slate-900">Hobby includes:</p>
+
+                        <!-- Features -->
+                        <ul class="mt-6 space-y-4">
+                            <li class="flex items-center space-x-6">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    fill="currentColor"
+                                    class="h-5 w-5 shrink-0 text-slate-800"
+                                >
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+
+                                <p class="text-slate-600">Unlimited recording ​​& editing</p>
+                            </li>
+                            <li class="flex items-center space-x-6">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    fill="currentColor"
+                                    class="h-5 w-5 shrink-0 text-slate-800"
+                                >
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+
+                                <p class="text-slate-600">Up to 720p video quality</p>
+                            </li>
+                            <li class="flex items-center space-x-6">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    fill="currentColor"
+                                    class="h-5 w-5 shrink-0 text-slate-800"
+                                >
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+
+                                <p class="text-slate-600">10GB of cloud storage</p>
+                            </li>
+                            <li class="flex items-center space-x-6">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    fill="currentColor"
+                                    class="h-5 w-5 shrink-0 text-slate-800"
+                                >
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+
+                                <p class="text-slate-600">128 kbps audio quality</p>
+                            </li>
+                            <li class="flex items-center space-x-6">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    fill="currentColor"
+                                    class="h-5 w-5 shrink-0 text-slate-800"
+                                >
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+
+                                <p class="text-slate-600">2 hours of automatic transcript generation</p>
+                            </li>
+                            <li class="flex items-center space-x-6">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    fill="currentColor"
+                                    class="h-5 w-5 shrink-0 text-slate-800"
+                                >
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+
+                                <p class="text-slate-600">1 hour of clips</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Pricing tier 3 -->
+                    <div class="bg-purple-light p-8 sm:p-10">
+                        <h3 class="text-lg font-semibold text-slate-900">Pro</h3>
+                        <p class="mt-4 text-slate-600">Lorem ipsum dolor sit amet molestie condimentum nisl mollis iaculis etiam.</p>
+                        <p class="mt-12">
+                            <span class="text-4xl font-semibold text-slate-900"> $59</span>
+                            <span class="ml-2.5 text-lg font-medium text-slate-500"> / month</span>
+                        </p>
+                        <a
+                            href="signup.html"
+                            class="group mt-8 inline-flex w-full items-center justify-center bg-slate-700 px-6 py-3 text-base font-medium text-white duration-150 ease-in-out hover:bg-slate-900 xl:px-7 xl:py-4 xl:text-lg"
+                        >
+                            Try free for 30 days
+                        </a>
+                        <p class="mt-3.5 text-center text-sm text-slate-500">No credit card required</p>
+                        <hr class="border-gray-secondary-400/35 my-10" />
+                        <p class="font-medium text-slate-900">Pro includes:</p>
+
+                        <!-- Features -->
+                        <ul class="mt-6 space-y-4">
+                            <li class="flex items-center space-x-6">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    fill="currentColor"
+                                    class="h-5 w-5 shrink-0 text-slate-800"
+                                >
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+
+                                <p class="text-slate-600">Unlimited recording ​​& editing</p>
+                            </li>
+                            <li class="flex items-center space-x-6">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    fill="currentColor"
+                                    class="h-5 w-5 shrink-0 text-slate-800"
+                                >
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+
+                                <p class="text-slate-600">Up to 4k video quality</p>
+                            </li>
+                            <li class="flex items-center space-x-6">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    fill="currentColor"
+                                    class="h-5 w-5 shrink-0 text-slate-800"
+                                >
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+
+                                <p class="text-slate-600">Unlimitted cloud storage</p>
+                            </li>
+                            <li class="flex items-center space-x-6">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    fill="currentColor"
+                                    class="h-5 w-5 shrink-0 text-slate-800"
+                                >
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+
+                                <p class="text-slate-600">320 kbps audio quality</p>
+                            </li>
+                            <li class="flex items-center space-x-6">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    fill="currentColor"
+                                    class="h-5 w-5 shrink-0 text-slate-800"
+                                >
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+
+                                <p class="text-slate-600">Unlimitted automatic transcript generation</p>
+                            </li>
+                            <li class="flex items-center space-x-6">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    fill="currentColor"
+                                    class="h-5 w-5 shrink-0 text-slate-800"
+                                >
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+
+                                <p class="text-slate-600">Unlimitted clips</p>
+                            </li>
+
+                            <li class="flex items-center space-x-6">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    fill="currentColor"
+                                    class="h-5 w-5 shrink-0 text-slate-800"
+                                >
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+
+                                <p class="text-slate-600">Listener analytics</p>
+                            </li>
+
+                            <li class="flex items-center space-x-6">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    fill="currentColor"
+                                    class="h-5 w-5 shrink-0 text-slate-800"
+                                >
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+
+                                <p class="text-slate-600">Screen sharing</p>
+                            </li>
+
+                            <li class="flex items-center space-x-6">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    fill="currentColor"
+                                    class="h-5 w-5 shrink-0 text-slate-800"
+                                >
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+
+                                <p class="text-slate-600">Team spaces</p>
+                            </li>
+
+                            <li class="flex items-center space-x-6">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    fill="currentColor"
+                                    class="h-5 w-5 shrink-0 text-slate-800"
+                                >
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+
+                                <p class="text-slate-600">24/7 live support</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="h-16 bg-vanilla sm:h-24"></div>
 </Layout>
