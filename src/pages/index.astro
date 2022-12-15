@@ -3,6 +3,7 @@
 import Layout from "../layouts/Layout.astro";
 
 // components
+import { Icon } from "astro-icon";
 import { Image } from "@astrojs/image/components";
 import ListItem from "@/components/ListItem";
 ---
@@ -88,6 +89,22 @@ import ListItem from "@/components/ListItem";
                 >
                     <Image src="../src/assets/images/hero.jpg" width="600" height="800" class="h-auto w-full object-cover" alt="Home Hero Image" />
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Logo Cloud -->
+    <section class="relative overflow-hidden bg-zinc-50 py-20 lg:pt-24">
+        <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+            <p class="text-center text-base font-semibold uppercase tracking-widest text-zinc-500">Certified repair technician for</p>
+
+            <!-- Logos-->
+            <div class="mt-10 flex items-center justify-center gap-12">
+                <Icon name="brand_honda" class="text-zinc-400 h-28" />
+                <Icon name="brand_kawasaki" class="text-zinc-400 h-28" />
+                <Icon name="brand_polaris" class="text-zinc-400 h-28" />
+                <Icon name="brand_suzuki" class="text-zinc-400 h-28" />
+                <Icon name="brand_yamaha" class="text-zinc-400 h-28" />
             </div>
         </div>
     </section>
