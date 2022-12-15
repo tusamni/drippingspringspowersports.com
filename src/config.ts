@@ -1,7 +1,13 @@
 export const siteConfig = {
-    name: "Chris Porter",
-    description: "Dripping Springs Powersports",
     url: "https://drippingspringspowersports.com",
+}
+
+export const businessConfig = {
+    name: "Dripping Springs Powersports",
+    email: "chris@drippingspringspowersports.com",
+    phone: "(512) 517-2070",
+    pricingService: 95,
+    pricingHourly: 95
 }
 
 export const imageConfig = {

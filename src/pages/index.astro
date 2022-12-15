@@ -2,9 +2,13 @@
 // layouts
 import Layout from "../layouts/Layout.astro";
 
+// confing
+import { businessConfig } from "@/src/config";
+
 // components
 import { Icon } from "astro-icon";
 import { Image } from "@astrojs/image/components";
+import Faq from "@/components/Faq";
 import ListItem from "@/components/ListItem";
 ---
 
@@ -17,6 +21,7 @@ import ListItem from "@/components/ListItem";
                 >
                     I'm a mobile powersport mechanic.
                 </h1>
+
                 <ul
                     class="mt-6 flex flex-col space-y-4 md:mx-auto md:mt-8 md:max-w-3xl md:flex-row md:space-y-0 md:space-x-2 lg:space-x-4 xl:mx-0 xl:flex-col xl:space-y-4 xl:space-x-0"
                 >
@@ -24,6 +29,7 @@ import ListItem from "@/components/ListItem";
                     <ListItem>Full service repair, at your door.</ListItem>
                     <ListItem>I'm a factory certified repair technician.</ListItem>
                 </ul>
+
                 <div class="mt-10 flex flex-col sm:flex-row sm:space-x-5 md:mt-12 md:justify-center xl:justify-start">
                     <a
                         href="signup.html"
@@ -37,10 +43,15 @@ import ListItem from "@/components/ListItem";
                         >(800) 532-3343</a
                     >
                 </div>
+
+                <p class="mt-4 flex text-md text-zinc-600/90 md:justify-center xl:justify-start xl:text-base">
+                    Serving Austin, Westlake, Lakeway, Bee Cave & Dripping Springs
+                </p>
             </div>
         </div>
 
-        <div class="bg-gradient-to-r from-vanilla via-zinc-50 to-zinc-100">
+        <!-- testimonial -->
+        <div class="bg-gradient-to-r from-orange-50 via-orange-100 to-orange-50">
             <div class="relative mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
                 <div
                     class="mx-auto max-w-lg pt-20 pb-8 pl-4 md:mx-0 md:max-w-md lg:max-w-lg lg:pt-28 lg:pb-16 xl:max-w-xl xl:py-12 xl:pl-14 2xl:pl-0"
@@ -48,7 +59,7 @@ import ListItem from "@/components/ListItem";
                     <blockquote>
                         <div class="relative leading-relaxed text-zinc-700 xl:text-lg">
                             <svg
-                                class="absolute left-0 -top-12 h-8 w-8 transform text-gray-secondary-200 xl:top-0 xl:-left-5 xl:-translate-x-full xl:-translate-y-2"
+                                class="absolute left-0 -top-12 h-8 w-8 transform text-orange-200 xl:top-0 xl:-left-5 xl:-translate-x-full xl:-translate-y-2"
                                 height="48"
                                 width="48"
                                 viewBox="0 0 48 48"
@@ -93,24 +104,8 @@ import ListItem from "@/components/ListItem";
         </div>
     </section>
 
-    <!-- Logo Cloud -->
-    <section class="relative overflow-hidden bg-zinc-50 py-20 lg:pt-24">
-        <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
-            <p class="text-center text-base font-semibold uppercase tracking-widest text-zinc-500">Certified repair technician for</p>
-
-            <!-- Logos-->
-            <div class="mt-4 flex items-center justify-center gap-12">
-                <Icon name="brand_honda" class="text-zinc-400 h-28" />
-                <Icon name="brand_kawasaki" class="text-zinc-400 h-28" />
-                <Icon name="brand_polaris" class="text-zinc-400 h-28" />
-                <Icon name="brand_suzuki" class="text-zinc-400 h-28" />
-                <Icon name="brand_yamaha" class="text-zinc-400 h-28" />
-            </div>
-        </div>
-    </section>
-
-    <!-- Feature Blocks -->
-    <section class="relative overflow-hidden bg-zinc-50 pt-32 pb-20 lg:pt-24 lg:pb-28">
+    <!-- about -->
+    <section class="relative overflow-hidden bg-zinc-50 pt-32 pb-20 lg:pt-48 lg:pb-28">
         <!-- Container -->
         <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
             <!-- Block 1 -->
@@ -121,8 +116,8 @@ import ListItem from "@/components/ListItem";
                     <div
                         class="absolute right-0 top-0 w-64 -translate-y-24 bg-zinc-100/95 p-6 backdrop-blur-sm sm:py-7 lg:left-0 lg:top-[unset] lg:bottom-0 lg:translate-y-24 2xl:-translate-x-16"
                     >
-                        <p class="text-4xl font-semibold text-zinc-900 xl:text-5xl">1000+</p>
-                        <p class="mt-5 text-zinc-700">Podcasters use Waves to power their podcast</p>
+                        <p class="text-4xl font-semibold text-zinc-900 xl:text-5xl">400+</p>
+                        <p class="mt-5 text-zinc-700">Mobile service calls completed last year</p>
                     </div>
                 </div>
 
@@ -136,6 +131,22 @@ import ListItem from "@/components/ListItem";
                         MX Series, my background ensures a positive experience for my clients all over the Austin area.
                     </p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Logo Cloud -->
+    <section class="relative overflow-hidden bg-zinc-50 py-20 lg:pt-24">
+        <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+            <p class="text-center text-base font-semibold uppercase tracking-widest text-zinc-500">Certified repair technician for</p>
+
+            <!-- Logos-->
+            <div class="mt-4 flex items-center justify-center gap-12">
+                <Icon name="brand_honda" class="text-zinc-400 h-28" />
+                <Icon name="brand_kawasaki" class="text-zinc-400 h-28" />
+                <Icon name="brand_polaris" class="text-zinc-400 h-28" />
+                <Icon name="brand_suzuki" class="text-zinc-400 h-28" />
+                <Icon name="brand_yamaha" class="text-zinc-400 h-28" />
             </div>
         </div>
     </section>
@@ -156,75 +167,57 @@ import ListItem from "@/components/ListItem";
                     <h2 class="text-4xl font-semibold leading-tight text-zinc-900 sm:text-5xl sm:leading-tight">Frequently asked questions</h2>
 
                     <!-- FAQs -->
-                    <ul class="mt-12 space-y-8 divide-y divide-gray-secondary-400/75 sm:mt-16">
-                        <!-- Question / Answer 1 -->
-                        <li x-data={"{ open: false }"}>
-                            <!-- Question -->
-                            <button class="flex w-full items-center justify-between" x-on:click="open = !open">
-                                <p class="text-left text-lg font-semibold text-zinc-900 sm:text-xl">How do I book an appointment?</p>
-                                <span
-                                    class="relative ml-4 flex h-4 w-4 duration-300 before:absolute before:bottom-1/2 before:h-0.5 before:-translate-y-1/2 before:rotate-90 before:bg-zinc-800 before:transition-[width] before:content-[''] after:absolute after:bottom-1/2 after:h-0.5 after:w-4 after:-translate-y-1/2 after:bg-zinc-800 after:content-[''] sm:h-[18px] sm:w-[18px] sm:after:w-[18px]"
-                                    x-bind:class="open ? 'before:w-0 rotate-0' : 'sm:before:w-[18px] before:w-4 rotate-180'"></span>
-                            </button>
-
-                            <!-- Answer -->
-                            <div
-                                class="relative max-h-0 overflow-hidden duration-500"
-                                x-ref="question1"
-                                x-bind:style="open ? 'max-height: ' + $refs.question1.scrollHeight + 'px' : ''"
-                            >
-                                <div class="px-1 pt-5 text-base leading-relaxed text-zinc-700 sm:text-lg sm:leading-relaxed">
-                                    Lorem ipsum dolor sit amet vestibulum nullam bibendum. Odio velit curabitur purus tortor laoreet massa diam
-                                    blandit pulvinar duis ornare. Interdum vestibulum molestie lacinia maecenas tortor lacus nibh pretium faucibus do.
-                                </div>
+                    <ul class="mt-12 divide-y divide-zinc-400/75 sm:mt-16">
+                        <Faq title="How do I book an appointment?">
+                            <div class="space-y-3">
+                                <p>
+                                    Feel free to contact me anytime via the <a href="#contact" class="font-medium underline">contact form</a>,
+                                    emailing me at <a
+                                        href={`mailto:${businessConfig.email}`}
+                                        title="Email Dripping Springs Powersports"
+                                        class="font-medium underline">{businessConfig.email}</a
+                                    >, or by calling me at <a
+                                        href={`tel:${businessConfig.phone}`}
+                                        title="Call Dripping Springs Powersports"
+                                        class="font-medium underline">{businessConfig.phone}</a
+                                    >.
+                                </p>
+                                <p>
+                                    Please keep in mind that we're always busy. However, if you have a time constraint or tight schedule we'll do our
+                                    best to accomodate your needs.
+                                </p>
                             </div>
-                        </li>
+                        </Faq>
 
-                        <!-- Question / Answer 2 -->
-                        <li class="pt-8" x-data={"{ open: false }"}>
-                            <!-- Question -->
-                            <button class="flex w-full items-center justify-between" x-on:click="open = !open">
-                                <p class="text-left text-lg font-semibold text-zinc-900 sm:text-xl">How does your pricing work?</p>
-                                <span
-                                    class="relative ml-4 flex h-4 w-4 duration-300 before:absolute before:bottom-1/2 before:h-0.5 before:-translate-y-1/2 before:rotate-90 before:bg-zinc-800 before:transition-[width] before:content-[''] after:absolute after:bottom-1/2 after:h-0.5 after:w-4 after:-translate-y-1/2 after:bg-zinc-800 after:content-[''] sm:h-[18px] sm:w-[18px] sm:after:w-[18px]"
-                                    x-bind:class="open ? 'before:w-0 rotate-0' : 'sm:before:w-[18px] before:w-4 rotate-180'"></span>
-                            </button>
-
-                            <!-- Answer -->
-                            <div
-                                class="relative max-h-0 overflow-hidden duration-500"
-                                x-ref="question1"
-                                x-bind:style="open ? 'max-height: ' + $refs.question1.scrollHeight + 'px' : ''"
-                            >
-                                <div class="px-1 pt-5 text-base leading-relaxed text-zinc-700 sm:text-lg sm:leading-relaxed">
-                                    Lorem ipsum dolor sit amet vestibulum nullam bibendum. Odio velit curabitur purus tortor laoreet massa diam
-                                    blandit pulvinar duis ornare. Interdum vestibulum molestie lacinia maecenas tortor lacus nibh pretium faucibus do.
-                                </div>
+                        <Faq title="How does your pricing work?">
+                            <div class="space-y-3">
+                                <p>Our pricing is simple. We have three possible charges:</p>
+                                <ol class="ml-6 space-y-2 py-4 text-sm">
+                                    <li>Labor Rate - <i>${businessConfig.pricingHourly} / hour</i></li>
+                                    <li>Service Fee - <i>${businessConfig.pricingService} / repair</i></li>
+                                    <li>Parts (if required)</li>
+                                </ol>
+                                <p>
+                                    Most customers ask about the service fee. This charge is absolutely necessary for any mobile business. It pays for
+                                    wear & tear, gasoline and time spent traveling (it's Austin afterall). You'll only be charged <i
+                                        >one service fee per repair</i
+                                    >. If we need to return with parts for your repair you will not be charged an additional service fee.
+                                </p>
                             </div>
-                        </li>
+                        </Faq>
 
-                        <!-- Question / Answer 3 -->
-                        <li class="pt-8" x-data={"{ open: false }"}>
-                            <!-- Question -->
-                            <button class="flex w-full items-center justify-between" x-on:click="open = !open">
-                                <p class="text-left text-lg font-semibold text-zinc-900 sm:text-xl">Can I get a repair estimate?</p>
-                                <span
-                                    class="relative ml-4 flex h-4 w-4 duration-300 before:absolute before:bottom-1/2 before:h-0.5 before:-translate-y-1/2 before:rotate-90 before:bg-zinc-800 before:transition-[width] before:content-[''] after:absolute after:bottom-1/2 after:h-0.5 after:w-4 after:-translate-y-1/2 after:bg-zinc-800 after:content-[''] sm:h-[18px] sm:w-[18px] sm:after:w-[18px]"
-                                    x-bind:class="open ? 'before:w-0 rotate-0' : 'sm:before:w-[18px] before:w-4 rotate-180'"></span>
-                            </button>
-
-                            <!-- Answer -->
-                            <div
-                                class="relative max-h-0 overflow-hidden duration-500"
-                                x-ref="question1"
-                                x-bind:style="open ? 'max-height: ' + $refs.question1.scrollHeight + 'px' : ''"
-                            >
-                                <div class="px-1 pt-5 text-base leading-relaxed text-zinc-700 sm:text-lg sm:leading-relaxed">
-                                    Lorem ipsum dolor sit amet vestibulum nullam bibendum. Odio velit curabitur purus tortor laoreet massa diam
-                                    blandit pulvinar duis ornare. Interdum vestibulum molestie lacinia maecenas tortor lacus nibh pretium faucibus do.
-                                </div>
+                        <Faq title="Can I get a repair estimate?">
+                            <div class="space-y-3">
+                                <p>
+                                    I can always give you an estimate before any work starts. After years working on anything and everything, I have a
+                                    good idea of the time most jobs require.
+                                </p>
+                                <p>
+                                    In certain cases, the repair ends up needing more work than expected and exceeds the estimate. In that case I'll
+                                    always try to do what's right for the client.
+                                </p>
                             </div>
-                        </li>
+                        </Faq>
                     </ul>
                 </div>
             </div>
@@ -232,7 +225,7 @@ import ListItem from "@/components/ListItem";
     </section>
 
     <!-- Pricing Cards -->
-    <section class="relative mt-72 overflow-hidden bg-zinc-100 pt-16 sm:pt-24">
+    <section class="bg-gradient-to-br from-orange-50 via-orange-100 to-orange-50 pt-16 sm:pt-24">
         <!-- Header -->
         <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
             <div class="mx-auto flex max-w-lg flex-col items-center sm:max-w-xl md:max-w-2xl lg:mx-0 lg:max-w-none">
@@ -241,313 +234,56 @@ import ListItem from "@/components/ListItem";
                 >
                     Pricing
                 </h1>
-                <p class="mx-auto mt-5 max-w-xl text-center text-lg leading-relaxed text-slate-700 sm:mt-6">
+                <!-- <p class="mx-auto mt-5 max-w-xl text-center text-lg leading-relaxed text-slate-700 sm:mt-6">
                     Lorem ipsum dolor sit amet dapibus fusce sed. Aliquet porta bibendum est platea fermentum tempus egestas. Luctus volutpat mauris
                     quisque dictum et rhoncus habitasse.
-                </p>
+                </p> -->
             </div>
         </div>
 
-        <div class="relative bg-zinc-100 pt-20">
-            <!-- Cards Container -->
+        <div class="pt-20">
             <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
-                <!-- Cards -->
-                <div
-                    class="relative mx-auto grid max-w-lg divide-x-0 divide-y divide-gray-secondary-400/75 border border-gray-secondary-400/60 sm:max-w-xl md:max-w-2xl lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:divide-x lg:divide-y-0"
-                >
-                    <!-- Pricing tier 1 -->
-                    <div class="bg-gray-secondary-50 p-8 sm:p-10">
+                <div class="relative mx-auto grid max-w-lg gap-12 sm:max-w-xl md:max-w-2xl lg:mx-0 lg:max-w-none lg:grid-cols-2">
+                    <div class="space-y-6 border border-zinc-400/75 bg-zinc-50 p-8 sm:p-10">
                         <h3 class="text-lg font-semibold text-slate-900">Service Fee</h3>
-                        <p class="mt-4 text-slate-600">Our service fee covers all trips related to the original visit.</p>
-                        <p class="mt-12">
-                            <span class="text-4xl font-semibold text-slate-900"> $95</span>
+                        <p>
+                            <span class="text-4xl font-semibold text-slate-900"> ${businessConfig.pricingService}</span>
                             <span class="ml-2.5 text-lg font-medium text-slate-500"> / repair</span>
                         </p>
-                        <a
+                        <p class="text-slate-600">
+                            My service fee covers all trips related the original visit. If parts, supplies or equipment are needed, you won't be
+                            charged multiple service fees for the subsequent visits.
+                        </p>
+
+                        <!-- <a
                             href="signup.html"
                             class="group mt-8 inline-flex w-full items-center justify-center bg-slate-700 px-6 py-3 text-base font-medium text-white duration-150 ease-in-out hover:bg-slate-900 xl:px-7 xl:py-4 xl:text-lg"
                         >
                             Try free for 30 days
                         </a>
-                        <p class="mt-3.5 text-center text-sm text-slate-500">No credit card required</p>
-                        <hr class="border-gray-secondary-400/35 my-10" />
-                        <p class="font-medium text-slate-900">Hobby includes:</p>
-
-                        <!-- Features -->
-                        <ul class="mt-6 space-y-4">
-                            <li class="flex items-center space-x-6">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 24 24"
-                                    fill="currentColor"
-                                    class="h-5 w-5 shrink-0 text-slate-800"
-                                >
-                                    <path
-                                        fill-rule="evenodd"
-                                        d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
-                                        clip-rule="evenodd"></path>
-                                </svg>
-
-                                <p class="text-slate-600">Unlimited recording ​​& editing</p>
-                            </li>
-                            <li class="flex items-center space-x-6">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 24 24"
-                                    fill="currentColor"
-                                    class="h-5 w-5 shrink-0 text-slate-800"
-                                >
-                                    <path
-                                        fill-rule="evenodd"
-                                        d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
-                                        clip-rule="evenodd"></path>
-                                </svg>
-
-                                <p class="text-slate-600">Up to 720p video quality</p>
-                            </li>
-                            <li class="flex items-center space-x-6">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 24 24"
-                                    fill="currentColor"
-                                    class="h-5 w-5 shrink-0 text-slate-800"
-                                >
-                                    <path
-                                        fill-rule="evenodd"
-                                        d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
-                                        clip-rule="evenodd"></path>
-                                </svg>
-
-                                <p class="text-slate-600">10GB of cloud storage</p>
-                            </li>
-                            <li class="flex items-center space-x-6">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 24 24"
-                                    fill="currentColor"
-                                    class="h-5 w-5 shrink-0 text-slate-800"
-                                >
-                                    <path
-                                        fill-rule="evenodd"
-                                        d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
-                                        clip-rule="evenodd"></path>
-                                </svg>
-
-                                <p class="text-slate-600">128 kbps audio quality</p>
-                            </li>
-                            <li class="flex items-center space-x-6">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 24 24"
-                                    fill="currentColor"
-                                    class="h-5 w-5 shrink-0 text-slate-800"
-                                >
-                                    <path
-                                        fill-rule="evenodd"
-                                        d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
-                                        clip-rule="evenodd"></path>
-                                </svg>
-
-                                <p class="text-slate-600">2 hours of automatic transcript generation</p>
-                            </li>
-                            <li class="flex items-center space-x-6">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 24 24"
-                                    fill="currentColor"
-                                    class="h-5 w-5 shrink-0 text-slate-800"
-                                >
-                                    <path
-                                        fill-rule="evenodd"
-                                        d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
-                                        clip-rule="evenodd"></path>
-                                </svg>
-
-                                <p class="text-slate-600">1 hour of clips</p>
-                            </li>
-                        </ul>
+                        <p class="mt-3.5 text-center text-sm text-slate-500">No credit card required</p> -->
                     </div>
 
-                    <!-- Pricing tier 3 -->
-                    <div class="bg-purple-light p-8 sm:p-10">
-                        <h3 class="text-lg font-semibold text-slate-900">Pro</h3>
-                        <p class="mt-4 text-slate-600">Lorem ipsum dolor sit amet molestie condimentum nisl mollis iaculis etiam.</p>
-                        <p class="mt-12">
-                            <span class="text-4xl font-semibold text-slate-900"> $59</span>
-                            <span class="ml-2.5 text-lg font-medium text-slate-500"> / month</span>
+                    <div class="space-y-6 border border-zinc-400/75 bg-zinc-50 p-8 sm:p-10">
+                        <h3 class="text-lg font-semibold text-slate-900">Hourly Rate</h3>
+                        <p>
+                            <span class="text-4xl font-semibold text-slate-900"> ${businessConfig.pricingHourly}</span>
+                            <span class="ml-2.5 text-lg font-medium text-slate-500"> / hour</span>
                         </p>
-                        <a
+                        <p class="text-slate-600">
+                            Services & repairs are calculated on an hourly scale. Some routine appointments will be calculated an the manufacturer's
+                            flat labor schedule.
+                        </p>
+                        <!-- <a
                             href="signup.html"
                             class="group mt-8 inline-flex w-full items-center justify-center bg-slate-700 px-6 py-3 text-base font-medium text-white duration-150 ease-in-out hover:bg-slate-900 xl:px-7 xl:py-4 xl:text-lg"
                         >
                             Try free for 30 days
                         </a>
-                        <p class="mt-3.5 text-center text-sm text-slate-500">No credit card required</p>
-                        <hr class="border-gray-secondary-400/35 my-10" />
-                        <p class="font-medium text-slate-900">Pro includes:</p>
-
-                        <!-- Features -->
-                        <ul class="mt-6 space-y-4">
-                            <li class="flex items-center space-x-6">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 24 24"
-                                    fill="currentColor"
-                                    class="h-5 w-5 shrink-0 text-slate-800"
-                                >
-                                    <path
-                                        fill-rule="evenodd"
-                                        d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
-                                        clip-rule="evenodd"></path>
-                                </svg>
-
-                                <p class="text-slate-600">Unlimited recording ​​& editing</p>
-                            </li>
-                            <li class="flex items-center space-x-6">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 24 24"
-                                    fill="currentColor"
-                                    class="h-5 w-5 shrink-0 text-slate-800"
-                                >
-                                    <path
-                                        fill-rule="evenodd"
-                                        d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
-                                        clip-rule="evenodd"></path>
-                                </svg>
-
-                                <p class="text-slate-600">Up to 4k video quality</p>
-                            </li>
-                            <li class="flex items-center space-x-6">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 24 24"
-                                    fill="currentColor"
-                                    class="h-5 w-5 shrink-0 text-slate-800"
-                                >
-                                    <path
-                                        fill-rule="evenodd"
-                                        d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
-                                        clip-rule="evenodd"></path>
-                                </svg>
-
-                                <p class="text-slate-600">Unlimitted cloud storage</p>
-                            </li>
-                            <li class="flex items-center space-x-6">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 24 24"
-                                    fill="currentColor"
-                                    class="h-5 w-5 shrink-0 text-slate-800"
-                                >
-                                    <path
-                                        fill-rule="evenodd"
-                                        d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
-                                        clip-rule="evenodd"></path>
-                                </svg>
-
-                                <p class="text-slate-600">320 kbps audio quality</p>
-                            </li>
-                            <li class="flex items-center space-x-6">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 24 24"
-                                    fill="currentColor"
-                                    class="h-5 w-5 shrink-0 text-slate-800"
-                                >
-                                    <path
-                                        fill-rule="evenodd"
-                                        d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
-                                        clip-rule="evenodd"></path>
-                                </svg>
-
-                                <p class="text-slate-600">Unlimitted automatic transcript generation</p>
-                            </li>
-                            <li class="flex items-center space-x-6">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 24 24"
-                                    fill="currentColor"
-                                    class="h-5 w-5 shrink-0 text-slate-800"
-                                >
-                                    <path
-                                        fill-rule="evenodd"
-                                        d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
-                                        clip-rule="evenodd"></path>
-                                </svg>
-
-                                <p class="text-slate-600">Unlimitted clips</p>
-                            </li>
-
-                            <li class="flex items-center space-x-6">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 24 24"
-                                    fill="currentColor"
-                                    class="h-5 w-5 shrink-0 text-slate-800"
-                                >
-                                    <path
-                                        fill-rule="evenodd"
-                                        d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
-                                        clip-rule="evenodd"></path>
-                                </svg>
-
-                                <p class="text-slate-600">Listener analytics</p>
-                            </li>
-
-                            <li class="flex items-center space-x-6">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 24 24"
-                                    fill="currentColor"
-                                    class="h-5 w-5 shrink-0 text-slate-800"
-                                >
-                                    <path
-                                        fill-rule="evenodd"
-                                        d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
-                                        clip-rule="evenodd"></path>
-                                </svg>
-
-                                <p class="text-slate-600">Screen sharing</p>
-                            </li>
-
-                            <li class="flex items-center space-x-6">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 24 24"
-                                    fill="currentColor"
-                                    class="h-5 w-5 shrink-0 text-slate-800"
-                                >
-                                    <path
-                                        fill-rule="evenodd"
-                                        d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
-                                        clip-rule="evenodd"></path>
-                                </svg>
-
-                                <p class="text-slate-600">Team spaces</p>
-                            </li>
-
-                            <li class="flex items-center space-x-6">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 24 24"
-                                    fill="currentColor"
-                                    class="h-5 w-5 shrink-0 text-slate-800"
-                                >
-                                    <path
-                                        fill-rule="evenodd"
-                                        d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
-                                        clip-rule="evenodd"></path>
-                                </svg>
-
-                                <p class="text-slate-600">24/7 live support</p>
-                            </li>
-                        </ul>
+                        <p class="mt-3.5 text-center text-sm text-slate-500">No credit card required</p> -->
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <div class="h-16 bg-vanilla sm:h-24"></div>
 </Layout>
