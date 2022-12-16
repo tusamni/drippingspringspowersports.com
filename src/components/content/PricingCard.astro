@@ -1,0 +1,17 @@
+---
+// props
+const { title, price, metric } = Astro.props;
+---
+
+<div class="space-y-6 border border-stone-400/75 bg-white p-8 sm:p-10">
+    <h3 class="text-lg font-semibold text-stone-900">{title}</h3>
+
+    <p>
+        <span class="text-4xl font-semibold text-stone-900">${price}</span>
+        <span class="ml-2.5 text-lg font-medium text-stone-500">/ {metric}</span>
+    </p>
+
+    <p class="text-stone-600">
+        <slot />
+    </p>
+</div>
