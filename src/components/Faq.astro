@@ -6,9 +6,9 @@ const { title } = Astro.props;
 <li x-data={"{ open: false }"} class="py-8">
     <!-- Question -->
     <button class="flex w-full items-center justify-between" x-on:click="open = !open">
-        <p class="text-left text-lg font-semibold text-zinc-900 sm:text-xl">{title}</p>
+        <p class="text-left text-lg font-semibold text-stone-900 sm:text-xl">{title}</p>
         <span
-            class="relative ml-4 flex h-4 w-4 duration-300 before:absolute before:bottom-1/2 before:h-0.5 before:-translate-y-1/2 before:rotate-90 before:bg-zinc-800 before:transition-[width] before:content-[''] after:absolute after:bottom-1/2 after:h-0.5 after:w-4 after:-translate-y-1/2 after:bg-zinc-800 after:content-[''] sm:h-[18px] sm:w-[18px] sm:after:w-[18px]"
+            class="relative ml-4 flex h-4 w-4 duration-300 before:absolute before:bottom-1/2 before:h-0.5 before:-translate-y-1/2 before:rotate-90 before:bg-stone-800 before:transition-[width] before:content-[''] after:absolute after:bottom-1/2 after:h-0.5 after:w-4 after:-translate-y-1/2 after:bg-stone-800 after:content-[''] sm:h-[18px] sm:w-[18px] sm:after:w-[18px]"
             x-bind:class="open ? 'before:w-0 rotate-0' : 'sm:before:w-[18px] before:w-4 rotate-180'"></span>
     </button>
 
@@ -18,7 +18,7 @@ const { title } = Astro.props;
         x-ref="question1"
         x-bind:style="open ? 'max-height: ' + $refs.question1.scrollHeight + 'px' : ''"
     >
-        <div class="px-1 pt-5 text-base leading-relaxed text-zinc-700 sm:leading-relaxed">
+        <div class="px-1 pt-5 text-base leading-relaxed text-stone-700 sm:leading-relaxed">
             <slot />
         </div>
     </div>
