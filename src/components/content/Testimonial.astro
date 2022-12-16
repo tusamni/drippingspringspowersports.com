@@ -8,7 +8,7 @@ const { name, location, image, content } = Astro.props;
 <div class="w-80 border border-stone-400/60 bg-white px-6 py-8 sm:w-96 sm:p-8 lg:w-[512px] lg:p-10">
     <div class="flex">
         <div class="h-12 w-12 shrink-0 bg-stone-100 lg:h-14 lg:w-14">
-            <Image class="object-cover object-center" width="50" height="50" src={import(`../../assets/images/${image}`)} alt={name} />
+            <Image class="object-cover object-center" width="50" height="50" src={import(`../../assets/images/${image}.jpg`)} alt={name} />
         </div>
 
         <div class="ml-4">
