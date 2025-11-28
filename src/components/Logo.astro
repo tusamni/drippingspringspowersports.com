@@ -1,0 +1,16 @@
+---
+import { siteConfig } from '@/config';
+
+// props
+export interface Props {
+    logoWidth?: string;
+    textSize?: string;
+}
+const { logoWidth = "w-8", textSize = "text-xl" } = Astro.props;
+---
+
+<a href="/" class="w-fit flex items-center gap-1 pl-6 sm:pl-0">
+    <div class:list={["font-semibold font-heading antialiased uppercase text-balance", textSize]}>
+        {siteConfig.nameShort}
+    </div>
+</a>
