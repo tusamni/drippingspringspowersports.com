@@ -6,37 +6,31 @@ import Container from "@/components/content/Container";
 
 <MainLayout>
     <div class="relative h-180">
-        <img src="https://cdn.cosmicjs.com/18456090-cca7-11f0-9626-37f7eb5f56f2-vikram-sundaramoorthy-pd8CfO07lBU-unsplash.jpg" class="absolute inset-0 object-cover h-180 w-full shadow-2xl" />
+        <img src="https://imgix.cosmicjs.com/18456090-cca7-11f0-9626-37f7eb5f56f2-vikram-sundaramoorthy-pd8CfO07lBU-unsplash.jpg" class="absolute inset-0 object-cover h-180 w-full shadow-2xl" />
 
         <Container classes="relative z-50">
-            <div class="w-full h-full bg-black/90 p-8">
-                <div class="grid grid-cols-3 gap-12 text-white">
-                    <div class="flex gap-4">
-                        <img src="https://cdn.cosmicjs.com/18456090-cca7-11f0-9626-37f7eb5f56f2-vikram-sundaramoorthy-pd8CfO07lBU-unsplash.jpg" class="inset-0 object-cover w-40 h-auto shadow-2xl" />
+            <div class="w-full h-full bg-black/60 shadow-2xl backdrop-blur-3xl p-10">
+                <div class="grid grid-cols-3 gap-x-12 gap-y-8 text-white">
+                    {
+                        [...Array(3)].map((_, index) => (
+                            <div class="flex gap-4">
+                                <img src="https://imgix.cosmicjs.com/18456090-cca7-11f0-9626-37f7eb5f56f2-vikram-sundaramoorthy-pd8CfO07lBU-unsplash.jpg?w=300" class="inset-0 object-cover w-40 h-auto shadow-2xl" />
 
-                        <div class="flex flex-col">
-                            <div class="font-semibold text-xl">Dirt Bikes</div>
-                            <div class="text-stone-200 text-sm">We provide expert maintenance, repair, and performance tuning for dirtbikes at our outdoor powersports shop.</div>
-                        </div>
-                    </div>
+                                <div class="flex flex-col space-y-2">
+                                    <div class="font-semibold text-xl">Dirt Bikes</div>
+                                    <div class="text-stone-200 text-sm">We provide expert maintenance, repair, and performance tuning for dirtbikes at our outdoor powersports shop.</div>
+                                    <div class="flex gap-1 items-center">
+                                        <div class="font-semibold underline">More Info</div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-4">
+                                            <path fill-rule="evenodd" d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        ))
+                    }
 
-                    <div class="flex gap-4">
-                        <img src="https://cdn.cosmicjs.com/18456090-cca7-11f0-9626-37f7eb5f56f2-vikram-sundaramoorthy-pd8CfO07lBU-unsplash.jpg" class="inset-0 object-cover w-40 h-auto shadow-2xl" />
-
-                        <div class="flex flex-col">
-                            <div class="font-semibold text-xl">Dirt Bikes</div>
-                            <div class="text-stone-200 text-sm">We provide expert maintenance, repair, and performance tuning for dirtbikes at our outdoor powersports shop.</div>
-                        </div>
-                    </div>
-
-                    <div class="flex gap-4">
-                        <img src="https://cdn.cosmicjs.com/18456090-cca7-11f0-9626-37f7eb5f56f2-vikram-sundaramoorthy-pd8CfO07lBU-unsplash.jpg" class="inset-0 object-cover w-40 h-auto shadow-2xl" />
-
-                        <div class="flex flex-col">
-                            <div class="font-semibold text-xl">Dirt Bikes</div>
-                            <div class="text-stone-200 text-sm">We provide expert maintenance, repair, and performance tuning for dirtbikes at our outdoor powersports shop.</div>
-                        </div>
-                    </div>
+                    <div class="col-start-1 text-balance text-lg">If you don't see what the service you're looking for, <span class="font-semibold underline">contact us</span> and we'll see if we can help!</div>
                 </div>
             </div>
         </Container>
@@ -45,9 +39,7 @@ import Container from "@/components/content/Container";
     <div class="bg-mongoose-900 py-18">
         <Container>
             <h1 class="text-white">Dripping Springs Outdoor Powersport is your trusted, local repair facility.</h1>
-            <p>We specialize in expert service and maintenance for UTVs, 4-wheelers, and dirt bikes.</p>
-            <p>From routine tune-ups to complex engine diagnostics and full-service repairs, our skilled technicians ensure your powersport vehicle is running at peak performance. We use quality parts and provide reliable service so you can hit the trails with confidence.</p>
-            <p>Don't let mechanical issues sideline your adventure. Call us today!</p>
+            <!-- <img src="https://imgix.cosmicjs.com/c6f808a0-cd5a-11f0-98cc-3f8713ed1b2f-DSC04416.jpg" /> -->
         </Container>
     </div>
 </MainLayout>

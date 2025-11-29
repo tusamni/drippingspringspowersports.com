@@ -5,7 +5,7 @@ import "lightgallery/css/lightgallery-bundle.css";
 import { Font } from "astro:assets";
 // import ContactForm from "@/components/ContactForm";
 import Container from "@/components/content/Container";
-// import Footer from "@/components/content/Footer";
+import Footer from "@/components/Footer";
 import Logo from "@/components/Logo";
 import MainNavigation from "@/components/navigation/Main";
 import Section from "@/components/content/Section";
@@ -37,14 +37,14 @@ import Section from "@/components/content/Section";
 		<slot />
 
 		<!-- {
-				!Astro.url.pathname.includes("contact") && (
-					<Container>
-						<ContactForm />
-					</Container>
-				)
-			}
+			!Astro.url.pathname.includes("contact") && (
+				<Container>
+					<ContactForm />
+				</Container>
+			)
+		} -->
 
-			<Footer /> -->
+		<Footer />
 
 		<script is:inline>
 			const el = document.querySelector(".navbar");
