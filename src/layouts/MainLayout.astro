@@ -24,19 +24,19 @@ import Section from "@/components/content/Section";
 	</head>
 
 	<body class="bg-wheat-50 text-stone-800">
-			<div class="bg-black py-8">
-				<Container size="large" mobilePadding={false}>
-					<div class="flex justify-between items-center bg-black">
-						<Logo textSize="text-4xl" />
+		<div class="bg-black py-8">
+			<Container size="large" mobilePadding={false}>
+				<div class="flex justify-between items-center bg-black">
+					<Logo logoWidth="w-66" />
 
-						<MainNavigation />
-					</div>
-				</Container>
-			</div>
-			
-			<slot />
+					<MainNavigation />
+				</div>
+			</Container>
+		</div>
 
-			<!-- {
+		<slot />
+
+		<!-- {
 				!Astro.url.pathname.includes("contact") && (
 					<Container>
 						<ContactForm />
@@ -48,14 +48,7 @@ import Section from "@/components/content/Section";
 
 		<script is:inline>
 			const el = document.querySelector(".navbar");
-			const observer = new IntersectionObserver(
-				([e]) =>
-					e.target.classList.toggle(
-						"is-pinned",
-						e.intersectionRatio < 1,
-					),
-				{ threshold: [1] },
-			);
+			const observer = new IntersectionObserver(([e]) => e.target.classList.toggle("is-pinned", e.intersectionRatio < 1), { threshold: [1] });
 
 			observer.observe(el);
 		</script>
@@ -69,9 +62,7 @@ import Section from "@/components/content/Section";
 				campaign: ["utm_campaign"],
 				gclid: ["gclid"],
 			});
-			document.getElementById("marketing").value = JSON.stringify(
-				visitData.get(),
-			);
+			document.getElementById("marketing").value = JSON.stringify(visitData.get());
 
 			import lightGallery from "lightgallery";
 			import lgThumbnail from "lightgallery/plugins/thumbnail";
