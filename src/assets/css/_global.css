@@ -5,6 +5,20 @@
 @import "./forms";
 @import "./typography";
 
+@theme {
+    --color-mongoose-50: #f9f7f3;
+    --color-mongoose-100: #f1ede3;
+    --color-mongoose-200: #e2d9c6;
+    --color-mongoose-300: #cfbfa2;
+    --color-mongoose-400: #b89c75;
+    --color-mongoose-500: #ad8b62;
+    --color-mongoose-600: #a07956;
+    --color-mongoose-700: #856249;
+    --color-mongoose-800: #6d513f;
+    --color-mongoose-900: #594335;
+    --color-mongoose-950: #2f221b;
+}
+
 body {
     font-family: var(--font-manrope);
     @apply tracking-wide

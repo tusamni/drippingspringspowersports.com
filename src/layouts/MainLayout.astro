@@ -23,30 +23,17 @@ import Section from "@/components/content/Section";
 		<Font cssVariable="--font-manrope" preload />
 	</head>
 
-	<body class="bg-black text-white">
-		<div class="relative">
-			<div
-				class="absolute -top-100 left-0 size-300 rounded-full bg-radial from-pink-500/20 from-40% to-pink-500/10 -z-30 blur-3xl"
-			>
-			</div>
-			<div
-				class="absolute top-50 right-0 size-300 rounded-full bg-radial from-sky-500/20 from-40% to-sky-500/10 -z-50 blur-3xl"
-			>
-			</div>
-			<div
-				class="absolute -top-100 right-0 size-300 rounded-full bg-radial from-emerald-500/20 from-40% to-emerald-500/10 -z-50 blur-3xl"
-			>
-			</div>
-		</div>
-
-		<Section>
-				<Container mobilePadding={false}>
-					<div class="flex justify-between items-center">
+	<body class="bg-wheat-50 text-stone-800">
+			<div class="bg-black py-8">
+				<Container size="large" mobilePadding={false}>
+					<div class="flex justify-between items-center bg-black">
 						<Logo textSize="text-4xl" />
 
 						<MainNavigation />
 					</div>
-				</Container>200
+				</Container>
+			</div>
+			
 			<slot />
 
 			<!-- {
@@ -58,7 +45,6 @@ import Section from "@/components/content/Section";
 			}
 
 			<Footer /> -->
-		</Section>
 
 		<script is:inline>
 			const el = document.querySelector(".navbar");
