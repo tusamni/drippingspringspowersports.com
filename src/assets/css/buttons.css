@@ -1,5 +1,5 @@
 .button {
-	@apply transition duration-300 inline-flex items-center justify-center font-medium px-5 py-3 rounded-sm hover:cursor-pointer;
+	@apply font-heading transition duration-300 inline-flex items-center justify-center font-semibold text-xl px-5 py-3 hover:cursor-pointer uppercase;
 
 	&.button-primary {
 		@apply text-white bg-sky-600 hover:bg-sky-700 focus:outline-none focus:ring-4 focus:ring-sky-300;
