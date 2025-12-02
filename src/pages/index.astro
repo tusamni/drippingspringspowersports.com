@@ -6,28 +6,49 @@ import Review from "@/components/content/Review";
 ---
 
 <MainLayout>
-    <div class="relative h-180">
-        <img src="https://imgix.cosmicjs.com/18456090-cca7-11f0-9626-37f7eb5f56f2-vikram-sundaramoorthy-pd8CfO07lBU-unsplash.jpg" class="absolute inset-0 object-cover h-180 w-full shadow-2xl" />
+    <div
+        x-data="{ 
+            activeSlide: 0,
+            images: [
+                `https://imgix.cosmicjs.com/18456090-cca7-11f0-9626-37f7eb5f56f2-vikram-sundaramoorthy-pd8CfO07lBU-unsplash.jpg`,
+                `https://imgix.cosmicjs.com/199cd520-ce66-11f0-ab33-09cb31e91e16-appic-DfWPponVHb0-unsplash.jpg`,
+                `https://imgix.cosmicjs.com/184bc930-cca7-11f0-9626-37f7eb5f56f2-ride-6806993_1920.jpg`,
+                `https://imgix.cosmicjs.com/2736b940-ccda-11f0-98cc-3f8713ed1b2f-1.webp`
+            ],
+            get transformStyle() {
+                return `translateX(-${this.activeSlide * 100}%)`;
+            },
+            setSlide(index) {
+                this.activeSlide = index;
+            }
+        }"
+    >
+        <div class="relative overflow-hidden h-180">
+            <div class="flex w-full transition-transform duration-500 ease-in-out" :style="{ transform: transformStyle }">
+                <template x-for="(image, index) in images" :key="index">
+                    <img :src="image" class="object-cover h-180 w-full shrink-0 shadow-2xl" />
+                </template>
+            </div>
 
-        <Container classes="absolute inset-x-0 bottom-10">
+            <!-- <Container classes="absolute inset-x-0 bottom-10">
             <div class="flex justify-end items-end">
-                <div class="bg-black/50 w-125 backdrop-blur-lg p-5">
+                <div claszss="bg-black/50 w-125 backdrop-blur-lg p-5">
                     <div class="text-white text-2xl font-semibold tracking-tight font-heading">Dirt Bike Service & Repair</div>
                     <div class="text-stone-200">We provide expert maintenance, repair, and performance tuning for dirtbikes at our outdoor powersports shop.</div>
                 </div>
             </div>
-        </Container>
-    </div>
-
-    <div class="grid grid-cols-4">
-        <div class="h-40 relative">
-            <img src="https://imgix.cosmicjs.com/18456090-cca7-11f0-9626-37f7eb5f56f2-vikram-sundaramoorthy-pd8CfO07lBU-unsplash.jpg" class="absolute inset-0 object-cover w-full h-40 shadow-2xl" />
-            <div class="absolute h-2 w-full inset-x-0 bottom-0 bg-amber-400 z-10"></div>
+        </Container> -->
         </div>
 
-        <img src="https://imgix.cosmicjs.com/18456090-cca7-11f0-9626-37f7eb5f56f2-vikram-sundaramoorthy-pd8CfO07lBU-unsplash.jpg" class="object-cover w-full h-40 shadow-2xl" />
-        <img src="https://imgix.cosmicjs.com/18456090-cca7-11f0-9626-37f7eb5f56f2-vikram-sundaramoorthy-pd8CfO07lBU-unsplash.jpg" class="object-cover w-full h-40 shadow-2xl" />
-        <img src="https://imgix.cosmicjs.com/18456090-cca7-11f0-9626-37f7eb5f56f2-vikram-sundaramoorthy-pd8CfO07lBU-unsplash.jpg" class="object-cover w-full h-40 shadow-2xl" />
+        <div class="grid grid-cols-4">
+            <template x-for="(image, index) in images" :key="'thumb-' + index">
+                <img :src="image" class="object-cover w-full h-40 shadow-2xl hover:cursor-pointer" :class="{ 'active': activeSlide === index }" @click="setSlide(index)" />
+            </template>
+            <!-- 
+            <img src="https://imgix.cosmicjs.com/18456090-cca7-11f0-9626-37f7eb5f56f2-vikram-sundaramoorthy-pd8CfO07lBU-unsplash.jpg" class="object-cover w-full h-40 shadow-2xl" />
+            <img src="https://imgix.cosmicjs.com/18456090-cca7-11f0-9626-37f7eb5f56f2-vikram-sundaramoorthy-pd8CfO07lBU-unsplash.jpg" class="object-cover w-full h-40 shadow-2xl" />
+            <img src="https://imgix.cosmicjs.com/18456090-cca7-11f0-9626-37f7eb5f56f2-vikram-sundaramoorthy-pd8CfO07lBU-unsplash.jpg" class="object-cover w-full h-40 shadow-2xl" /> -->
+        </div>
     </div>
 
     <div>
