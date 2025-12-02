@@ -4,6 +4,8 @@ import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
 import netlify from "@astrojs/netlify";
 
+import alpinejs from "@astrojs/alpinejs";
+
 // https://astro.build/config
 export default defineConfig({
     adapter: netlify(),
@@ -20,7 +22,7 @@ export default defineConfig({
             cssVariable: "--font-manrope"
         }]
     },
-    integrations: [sitemap()],
+    integrations: [sitemap(), alpinejs()],
     site: "https://eriksolsen.com",
     trailingSlash: "always",
     vite: {

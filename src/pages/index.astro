@@ -1,24 +1,13 @@
 ---
 import MainLayout from "@/layouts/MainLayout";
 
-import Container from "@/components/content/Container";
-import MenuItem from "@/components/navigation/MenuItem";
+import Container from "@/components/layout/Container";
 import Review from "@/components/content/Review";
 ---
 
 <MainLayout>
     <div class="relative h-180">
         <img src="https://imgix.cosmicjs.com/18456090-cca7-11f0-9626-37f7eb5f56f2-vikram-sundaramoorthy-pd8CfO07lBU-unsplash.jpg" class="absolute inset-0 object-cover h-180 w-full shadow-2xl" />
-
-        <Container classes="relative z-50">
-            <div class="w-full h-full bg-black/60 shadow-2xl backdrop-blur-3xl p-10">
-                <div class="grid grid-cols-3 gap-x-12 gap-y-8 text-white">
-                    {[...Array(3)].map((_, index) => <MenuItem />)}
-
-                    <div class="col-start-1 text-balance text-lg">If you don't see what the service you're looking for, <span class="font-semibold underline">contact us</span> and we'll see if we can help!</div>
-                </div>
-            </div>
-        </Container>
 
         <Container classes="absolute inset-x-0 bottom-10">
             <div class="flex justify-end items-end">

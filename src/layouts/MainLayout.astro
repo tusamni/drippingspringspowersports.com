@@ -3,12 +3,10 @@ import "/src/assets/css/_global.css";
 import "lightgallery/css/lightgallery-bundle.css";
 
 import { Font } from "astro:assets";
-import ContactForm from "@/components/content/ContactForm";
-import Container from "@/components/content/Container";
+import ContactForm from "@/components/forms/ContactForm";
+import Container from "@/components/layout/Container";
 import Footer from "@/components/Footer";
-import Logo from "@/components/Logo";
-import MainNavigation from "@/components/navigation/Main";
-import Section from "@/components/content/Section";
+import Main from "@/components/navigation/Main";
 ---
 
 <html lang="en">
@@ -24,15 +22,7 @@ import Section from "@/components/content/Section";
 	</head>
 
 	<body class="bg-wheat-50 text-stone-800">
-		<div class="bg-black py-8">
-			<Container size="large" mobilePadding={false}>
-				<div class="flex justify-between items-center bg-black">
-					<Logo logoWidth="w-66" />
-
-					<MainNavigation />
-				</div>
-			</Container>
-		</div>
+		<Main />
 
 		<slot />
 

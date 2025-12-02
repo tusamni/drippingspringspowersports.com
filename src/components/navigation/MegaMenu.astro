@@ -1,0 +1,24 @@
+---
+import Container from "@/components/layout/Container";
+import MenuItem from "@/components/navigation/MenuItem";
+---
+
+<div class="relative">
+    <div x-show="open" x-cloak x-transition:enter="transition ease-out duration-100" x-transition:enter-start="opacity-0 transform -translate-y-4 scale-95" x-transition:enter-end="opacity-100 transform translate-y-0 scale-100" x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 transform translate-y-0 scale-100" x-transition:leave-end="opacity-0 transform -translate-y-4 scale-95" class="w-full absolute z-50">
+        <Container mobilePadding={false}>
+            <div class="w-full h-full bg-black/60 shadow-2xl backdrop-blur-3xl p-6 md:p-10">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-x-12 gap-y-4 sm:gap-y-8 text-white">
+                    <div class="md:hidden font-semibold text-xl">Services We Offer</div>
+                    {[...Array(3)].map((_, index) => <MenuItem />)}
+
+                    <div class="md:hidden font-semibold text-xl">About Us</div>
+                    <div class="md:hidden font-semibold text-xl">FAQ</div>
+
+                    <div class="col-start-1 text-balance text-lg hidden md:block">
+                        If you don't see what the service you're looking for, <span class="font-semibold underline">contact us</span> and we'll see if we can help!
+                    </div>
+                </div>
+            </div>
+        </Container>
+    </div>
+</div>
