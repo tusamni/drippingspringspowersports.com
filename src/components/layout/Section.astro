@@ -1,3 +1,13 @@
-<div class="space-y-20 lg:space-y-32 py-32">
+---
+// props
+export interface Props {
+    topPaddingStarts?: "none" | "small" | "medium" | "large";
+    bottomPaddingStarts?: "none" | "small" | "medium" | "large";
+    classes?: string;
+}
+const { topPaddingStarts = "none", bottomPaddingStarts = "none", classes } = Astro.props;
+---
+
+<div class:list={["space-y-16 lg:space-y-32", topPaddingStarts === "none" && "pt-16 lg:pt-32", topPaddingStarts === "small" && "sm:pt-16 lg:pt-32", topPaddingStarts === "medium" && "md:pt-16 lg:pt-32", topPaddingStarts === "large" && "lg:pt-32", bottomPaddingStarts === "none" && "pb-16 lg:pb-32", bottomPaddingStarts === "small" && "sm:pb-16 lg:pb-32", bottomPaddingStarts === "medium" && "md:pb-16 lg:pb-32", bottomPaddingStarts === "large" && "lg:pb-32", classes]}>
     <slot />
 </div>
