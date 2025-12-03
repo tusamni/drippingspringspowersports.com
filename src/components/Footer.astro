@@ -4,40 +4,28 @@ import Logo from "@/components/Logo";
 import Manufacturers from "@/components/content/Manufacturers";
 ---
 
-<Manufacturers />
-
-<div class="bg-black p-16">
+<div class="bg-black py-28">
     <Container>
-        <div class="flex justify-between w-full">
+        <Manufacturers />
+
+        <div class="flex justify-between w-full mt-28">
             <Logo />
 
-            <div class="text-stone-200 w-120 text-balance text-right">
-                Dripping Springs Outdoor Powersport is a locally owned and
-                operated repair facility. We service all makes and models,
-                including ATVs, dirt bikes and more.
-            </div>
+            <div class="text-stone-200 w-120 text-balance text-right">Dripping Springs Outdoor Powersport is a locally owned and operated repair facility. We service all makes and models, including ATVs, dirt bikes and more.</div>
         </div>
 
         <div class="flex justify-between mt-8">
-            <ul
-                class="mt-8 flex gap-8 text-white font-medium uppercase font-heading text-xl tracking-tight"
-            >
+            <ul class="mt-8 flex gap-8 text-white font-medium uppercase font-heading text-xl tracking-tight">
                 <li>Home</li>
                 <li>Services</li>
                 <li>About Us</li>
                 <li>FAQ</li>
             </ul>
 
-            <div
-                class="flex flex-row items-center gap-6 text-xl font-heading uppercase tracking-tight text-white antialiased font-semibold"
-            >
+            <div class="flex flex-row items-center gap-6 text-xl font-heading uppercase tracking-tight text-white antialiased font-semibold">
                 <div>(512) 560-4223</div>
                 <div>
-                    <a
-                        href="/contact/"
-                        class="bg-sky-600 hover:bg-sky-500 py-3 px-4 transition-all duration-400"
-                        >Contact Us</a
-                    >
+                    <a href="/contact/" class="button button-primary button-inverse">Contact Us</a>
                 </div>
             </div>
         </div>

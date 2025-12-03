@@ -18,6 +18,18 @@
     --color-mongoose-900: #594335;
     --color-mongoose-950: #2f221b;
 
+    --color-paprika-50: #ffeff0;
+--color-paprika-100: #ffe0e2;
+    --color-paprika-200: #ffc5cd;
+    --color-paprika-300: #ff96a3;
+    --color-paprika-400: #ff5b74;
+    --color-paprika-500: #ff2249;
+    --color-paprika-600: #ff0034;
+    --color-paprika-700: #da002c;
+    --color-paprika-800: #b6002e;
+    --color-paprika-900: #850028;
+    --color-paprika-950: #580013;
+
     --font-heading: var(--font-heading);
 }
 

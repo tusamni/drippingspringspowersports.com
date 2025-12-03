@@ -17,7 +17,7 @@ export default defineConfig({
             cssVariable: "--font-heading"
         }, {
             provider: fontProviders.google(),
-            name: "Manrope",
+            name: "Inter",
             weights: ["200 800"],
             cssVariable: "--font-manrope"
         }]

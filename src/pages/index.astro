@@ -3,17 +3,18 @@ import MainLayout from "@/layouts/MainLayout";
 
 import Container from "@/components/layout/Container";
 import Review from "@/components/content/Review";
+import Section from "@/components/layout/Section";
 ---
 
 <MainLayout>
-    <div
+    <img src="https://imgix.cosmicjs.com/bdc03c70-d062-11f0-9412-e12f763e1300-side-view-man-repairing-motorcycle.jpg" class="object-cover h-200 w-full" />
+    <!-- <div
         x-data="{ 
             activeSlide: 0,
             images: [
-                `https://imgix.cosmicjs.com/18456090-cca7-11f0-9626-37f7eb5f56f2-vikram-sundaramoorthy-pd8CfO07lBU-unsplash.jpg`,
-                `https://imgix.cosmicjs.com/199cd520-ce66-11f0-ab33-09cb31e91e16-appic-DfWPponVHb0-unsplash.jpg`,
-                `https://imgix.cosmicjs.com/184bc930-cca7-11f0-9626-37f7eb5f56f2-ride-6806993_1920.jpg`,
-                `https://imgix.cosmicjs.com/2736b940-ccda-11f0-98cc-3f8713ed1b2f-1.webp`
+                { url: `https://imgix.cosmicjs.com/18456090-cca7-11f0-9626-37f7eb5f56f2-vikram-sundaramoorthy-pd8CfO07lBU-unsplash.jpg`,  title: 'Dirt Bike Service & Repair', description: 'We provide expert maintenance, repair, and performance tuning for dirtbikes at our outdoor powersports shop.'},
+                { url: `https://imgix.cosmicjs.com/1f7d1540-d069-11f0-9412-e12f763e1300-freepik__the-image-will-be-of-a-person-riding-an-atv-4wheel__42914.png`,  title: 'Four Wheeler Service & Repair', description: 'We provide expert maintenance, repair, and performance tuning for dirtbikes at our outdoor powersports shop.'},
+                { url: `https://imgix.cosmicjs.com/468fad50-d069-11f0-9412-e12f763e1300-freepik__the-image-will-be-of-a-farmer-riding-n-utility-veh__42915.png`,  title: 'Utility Vehicle Service & Repair', description: 'We provide expert maintenance, repair, and performance tuning for dirtbikes at our outdoor powersports shop.'},
             ],
             get transformStyle() {
                 return `translateX(-${this.activeSlide * 100}%)`;
@@ -26,42 +27,77 @@ import Review from "@/components/content/Review";
         <div class="relative overflow-hidden h-180">
             <div class="flex w-full transition-transform duration-500 ease-in-out" :style="{ transform: transformStyle }">
                 <template x-for="(image, index) in images" :key="index">
-                    <img :src="image" class="object-cover h-180 w-full shrink-0 shadow-2xl" />
+                    <img :src="image.url" class="object-cover h-180 w-full shrink-0 shadow-2xl" />
                 </template>
             </div>
 
-            <!-- <Container classes="absolute inset-x-0 bottom-10">
-            <div class="flex justify-end items-end">
-                <div claszss="bg-black/50 w-125 backdrop-blur-lg p-5">
-                    <div class="text-white text-2xl font-semibold tracking-tight font-heading">Dirt Bike Service & Repair</div>
-                    <div class="text-stone-200">We provide expert maintenance, repair, and performance tuning for dirtbikes at our outdoor powersports shop.</div>
-                </div>
-            </div>
-        </Container> -->
-        </div>
-
-        <div class="grid grid-cols-4">
-            <template x-for="(image, index) in images" :key="'thumb-' + index">
-                <img :src="image" class="object-cover w-full h-40 shadow-2xl hover:cursor-pointer" :class="{ 'active': activeSlide === index }" @click="setSlide(index)" />
-            </template>
-            <!-- 
-            <img src="https://imgix.cosmicjs.com/18456090-cca7-11f0-9626-37f7eb5f56f2-vikram-sundaramoorthy-pd8CfO07lBU-unsplash.jpg" class="object-cover w-full h-40 shadow-2xl" />
-            <img src="https://imgix.cosmicjs.com/18456090-cca7-11f0-9626-37f7eb5f56f2-vikram-sundaramoorthy-pd8CfO07lBU-unsplash.jpg" class="object-cover w-full h-40 shadow-2xl" />
-            <img src="https://imgix.cosmicjs.com/18456090-cca7-11f0-9626-37f7eb5f56f2-vikram-sundaramoorthy-pd8CfO07lBU-unsplash.jpg" class="object-cover w-full h-40 shadow-2xl" /> -->
-        </div>
-    </div>
-
-    <div>
-        <div class="bg-mongoose-900 py-18">
-            <Container>
-                <h1 class="text-white">Dripping Springs Outdoor Powersport is your trusted, local repair facility.</h1>
-
-                <hr class="text-mongoose-800 my-12" />
-
-                <div class="grid grid-cols-3 gap-12">
-                    {[...Array(3)].map((_, index) => <Review />)}
+            <Container classes="absolute inset-x-0 bottom-10">
+                <div class="flex justify-end items-end">
+                    <div class="bg-black/50 w-125 backdrop-blur-lg p-5">
+                        <div class="text-white text-2xl font-semibold tracking-tight font-heading" x-text="images[activeSlide].title"></div>
+                        <div class="text-stone-200" x-text="images[activeSlide].description"></div>
+                    </div>
                 </div>
             </Container>
         </div>
+
+        <div class="grid grid-cols-3">
+            <template x-for="(image, index) in images" :key="'thumb-' + index">
+                <div class="overflow-hidden relative">
+                    <img :src="image.url + '?w=750'" class="object-cover w-full h-75 shadow-2xl hover:cursor-pointer duration-300 transition-all" :class="{'opacity-100': activeSlide === index, 'opacity-70 hover:opacity-100': activeSlide !== index}" @click="setSlide(index)" sizes="25vw" />
+
+                    <div class="absolute inset-x-0 bottom-0 h-1 bg-amber-400" x-show="activeSlide === index"></div>
+                </div>
+            </template>
+        </div>
+    </div> -->
+
+    <div class="bg-radial-[at_10%_50%] to-mongoose-950 from-mongoose-300">
+        <Section>
+            <Container>
+                <h1 class="text-white">Dripping Springs Outdoor Powersport is your trusted, local repair facility.</h1>
+            </Container>
+
+            <div class="grid grid-cols-12 gap-12">
+                <img src="https://imgix.cosmicjs.com/bdc03c70-d062-11f0-9412-e12f763e1300-side-view-man-repairing-motorcycle.jpg" class="col-span-6 rounded-r-xl shadow-2xl" />
+
+                <div class="col-span-6 space-y-8 py-8 max-w-2xl">
+                    <div class="h2 text-white">Hey there, my name is Chris Porter.</div>
+
+                    <hr class="w-24 text-mongoose-400" />
+
+                    <div class="text-mongoose-50 text-lg font-light space-y-6 tracking-normal">
+                        <p>As the owner and operator of Flying Wrenches Mobile Powersports, my goal is simple: to make maintaining your powersports equipment as convenient as possible. I bring the shop to you!</p>
+                        <p>As a factory-certified technician, I specialize in full-service repairs, custom installs, and routine maintenance for motorcycles, ATVs, utility vehicles, and dirt bikes—all performed right at your door or ranch across Austin and the surrounding communities.</p>
+                        <p>I'm committed to providing quality, professional repairs with the unmatched convenience you deserve, so you can spend less time moving your machine and more time riding it.</p>
+                        <p>If you're ready to get started with Dripping Springs Outdoor Powersport, <a href="#" class="font-semibold underline">book an appointment</a>, and let's get started!</p>
+
+                        <div class="button button-primary">Book Now!</div>
+                    </div>
+                </div>
+            </div>
+        </Section>
+    </div>
+
+    <div class="bg-mongoose-100">
+        <Section>
+            <Container>
+                <div class="grid grid-cols-12 gap-12">
+                    <div class="col-span-4">
+                        <div class="w-fit">
+                            <h2>Our Services</h2>
+                            <hr class="bg-mongoose-400 h-3 border-0" />
+                        </div>
+
+                        <div class="space-y-6 mt-6">
+                            <p class="text-mongoose-950">From routine manufacturer maintenance to complex engine rebuilds, Dripping Springs Outdoor Powersports is your trusted partner for reliability and performance.</p>
+                            <p class="text-mongoose-950">We approach every repair with meticulous attention to detail and factory-level diagnostic precision, ensuring your ATV, UTV, or outdoor equipment is fixed right the first time and ready to handle the toughest Hill Country terrain.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-span-8"></div>
+                </div>
+            </Container>
+        </Section>
     </div>
 </MainLayout>

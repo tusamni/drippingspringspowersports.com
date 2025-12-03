@@ -1,23 +1,23 @@
 .button {
-	@apply font-heading transition duration-300 inline-flex items-center justify-center font-medium md:font-semibold text-lg lg:text-xl px-3 md:px-5 py-2 md:py-3 hover:cursor-pointer uppercase;
+	@apply font-heading transition duration-300 inline-flex items-center justify-center font-medium text-base rounded px-3 md:px-4 py-2 md:py-3 hover:cursor-pointer;
 
 	&.button-primary {
-		@apply text-white bg-sky-600 hover:bg-sky-700 focus:outline-none focus:ring-4 focus:ring-sky-300;
+		@apply text-white bg-mongoose-950 hover:bg-mongoose-800 focus:outline-none;
 
 		&.button-inverse {
-			@apply text-slate-900 bg-white hover:bg-slate-100;
+			@apply text-mongoose-900 bg-white hover:bg-mongoose-100;
 		}
 	}
 
 	&.button-success {
-		@apply text-white bg-emerald-600 hover:bg-emerald-700 focus:outline-none focus:ring-4 focus:ring-emerald-300 shadow-xl shadow-white/20;
+		@apply text-white bg-mongoose-700 hover:bg-mongoose-600 focus:outline-none;
 	}
 
 	&.button-ghost {
-		@apply text-slate-900 bg-white border border-slate-300 focus:outline-none hover:bg-slate-100 focus:ring-4 focus:ring-slate-100;
+		@apply text-mongoose-950 bg-transparent border border-mongoose-950 focus:outline-none;
 
 		&.button-inverse {
-			@apply bg-transparent border-slate-100 text-slate-100;
+			@apply border-mongoose-100 text-mongoose-100;
 		}
 	}
 }
@@ -26,15 +26,15 @@
 	@apply inline-flex items-center rounded-xl px-4 py-2 text-xs font-medium uppercase;
 
 	&.pill-primary {
-		@apply bg-white text-slate-800;
+		@apply bg-white text-mongoose-800;
 	}
 
 	&.pill-secondary {
-		@apply bg-slate-900 text-slate-50;
+		@apply bg-mongoose-900 text-mongoose-50;
 	}
 
 	&.pill-ghost {
-		@apply border border-slate-900 text-slate-900;
+		@apply border border-mongoose-900 text-mongoose-900;
 	}
 
 	&.pill-large {
