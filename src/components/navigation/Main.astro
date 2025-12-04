@@ -12,8 +12,8 @@ import MegaMenu from "@/components/navigation/MegaMenu";
         <div class="bg-black py-4 md:py-8">
             <Container size="large">
                 <div class="flex justify-between md:justify-normal lg:justify-between items-center bg-black">
-                    <LogoSquare logoWidth="min-w-10 w-10 lg:hidden" />
-                    <Logo logoWidth="hidden lg:block lg:w-50 xl:w-60" />
+                    <LogoSquare logoWidth="min-w-10 w-10" classes="lg:hidden" />
+                    <Logo logoWidth="lg:w-50 xl:w-60" classes="hidden lg:block" />
 
                     <ul class="hidden md:flex md:flex-none md:ml-6 lg:ml-0 gap-6 xl:gap-8 font-medium items-center text-base lg:text-lg font-heading text-white antialiased">
                         <li class="w-fit flex items-center gap-1 hover:cursor-pointer" @click="open = !open">
@@ -21,7 +21,7 @@ import MegaMenu from "@/components/navigation/MegaMenu";
                                 <path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z" clip-rule="evenodd"></path>
                             </svg>
                         </li>
-                        <li class="hover:cursor-pointer">Rates</li>
+                        <li class="hover:cursor-pointer"><a href="/rates/">Rates</a></li>
                         <li class="hover:cursor-pointer"><a href="/about/">About Us</a></li>
                         <li class="hover:cursor-pointer"><a href="/faq/">FAQ</a></li>
                     </ul>

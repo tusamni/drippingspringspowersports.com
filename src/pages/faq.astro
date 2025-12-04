@@ -16,31 +16,33 @@ import Service from "@/components/content/Service";
         <img src="https://imgix.cosmicjs.com/bdc03c70-d062-11f0-9412-e12f763e1300-side-view-man-repairing-motorcycle.jpg?w=1000" class="object-cover hidden lg:block lg:h-150 w-full" />
     </div>
 
-    <div class="bg-mongoose-900 relative">
+    <div class="bg-radial-[at_90%_20%] md:bg-radial-[at_10%_50%] to-mongoose-950 from-mongoose-700 relative">
         <Section>
             <Container>
-                <div class="mt-0 xl:-mx-16 xl:-mt-60 xl:bg-mongoose-900 xl:p-16 xl:rounded-t-lg">
+                <div class="mt-0 xl:-mx-16 xl:-mt-60 xl:bg-transparent xl:backdrop-blur-3xl xl:p-16 xl:rounded-lg">
                     <h1 class="text-white text-balance xl:max-w-3/4">Outdoor Powersports FAQ</h1>
                 </div>
             </Container>
 
             <Container>
                 <div class="space-y-24">
-                    {faqs.map((f) => (
-                        <div class="grid grid-cols-12 lg:gap-x-12 xl:gap-x-20 space-y-2 lg:space-y-20">
-                            <div class="col-span-12 lg:col-span-5 xl:col-span-4">
-                                <h2 class="heading-underline">{f.title}</h2>
-                            </div>
+                    {
+                        faqs.map((f) => (
+                            <div class="grid grid-cols-12 lg:gap-x-12 xl:gap-x-20 space-y-2 lg:space-y-20">
+                                <div class="col-span-12 lg:col-span-5 xl:col-span-4">
+                                    <h2 class="heading-underline">{f.title}</h2>
+                                </div>
 
-                            <div class="col-span-12 lg:col-span-7 xl:col-span-8">
-                                {f.items.map((item) => (
-                                    <FaqItem question={item.question} answer={item.answer} />
-                                ))}
+                                <div class="col-span-12 lg:col-span-7 xl:col-span-8">
+                                    {f.items.map((item) => (
+                                        <FaqItem question={item.question} answer={item.answer} />
+                                    ))}
+                                </div>
                             </div>
-                        </div>
-                    ))}
+                        ))
+                    }
                 </div>
-
+            </Container>
         </Section>
     </div>
 </MainLayout>
