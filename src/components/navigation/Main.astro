@@ -5,7 +5,7 @@ import LogoSquare from "@/components/logos/LogoSquare";
 import MegaMenu from "@/components/navigation/MegaMenu";
 ---
 
-<div x-data={`{ open : false }`}>
+<div x-data={`{ open : false }`} class="sticky top-0 z-50 shadow-2xl">
     <div x-show="open" class="fixed inset-0 bg-mongoose-950/70 z-10" x-cloak x-transition.opacity.duration.200ms></div>
 
     <div class="relative mx-auto z-50">
@@ -21,8 +21,9 @@ import MegaMenu from "@/components/navigation/MegaMenu";
                                 <path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z" clip-rule="evenodd"></path>
                             </svg>
                         </li>
-                        <li class="hover:cursor-pointer">About Us</li>
-                        <li class="hover:cursor-pointer">FAQ</li>
+                        <li class="hover:cursor-pointer">Rates</li>
+                        <li class="hover:cursor-pointer"><a href="/about/">About Us</a></li>
+                        <li class="hover:cursor-pointer"><a href="/faq/">FAQ</a></li>
                     </ul>
 
                     <div class="flex flex-row md:w-full lg:w-auto justify-end items-center gap-3 md:gap-6">

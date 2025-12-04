@@ -11,8 +11,11 @@ import MenuItem from "@/components/navigation/MenuItem";
                     <div class="sm:col-span-3 md:hidden font-semibold text-xl">Services We Offer</div>
                     {[...Array(3)].map((_, index) => <MenuItem />)}
 
-                    <div class="sm:col-span-3 md:hidden font-semibold text-xl">About Us</div>
-                    <div class="sm:col-span-3 md:hidden font-semibold text-xl">FAQ</div>
+                    <div class="sm:col-span-3 md:hidden font-semibold text-xl">
+                        <a href="/about/">About Us</a> 
+                    </div>
+                    <div class="sm:col-span-3 md:hidden font-semibold text-xl">
+                        <a href="/faq/">FAQ</a></div>
 
                     <div class="col-start-1 md:col-span-3 lg:col-span-2 xl:col-span-1 text-balance text-lg hidden md:block">
                         If you don't see what the service you're looking for, <span class="font-semibold underline">contact us</span> and we'll see if we can help!

@@ -1,6 +1,7 @@
 ---
 import MainLayout from "@/layouts/MainLayout";
 
+import { reviews } from "@/config";
 import Container from "@/components/layout/Container";
 import Review from "@/components/content/Review";
 import Section from "@/components/layout/Section";
@@ -8,7 +9,7 @@ import Service from "@/components/content/Service";
 ---
 
 <MainLayout>
-    <img src="https://imgix.cosmicjs.com/bdc03c70-d062-11f0-9412-e12f763e1300-side-view-man-repairing-motorcycle.jpg" class="object-cover h-[60vh] lg:h-200 w-full" />
+    <img src="https://imgix.cosmicjs.com/bdc03c70-d062-11f0-9412-e12f763e1300-side-view-man-repairing-motorcycle.jpg?w=3000" class="object-cover h-[60vh] lg:h-200 w-full" />
     <!-- <div
         x-data="{ 
             activeSlide: 0,
@@ -60,15 +61,12 @@ import Service from "@/components/content/Service";
             </Container>
 
             <div class="grid grid-cols-12 max-md:gap-y-16">
-                <img src="https://imgix.cosmicjs.com/bdc03c70-d062-11f0-9412-e12f763e1300-side-view-man-repairing-motorcycle.jpg" class="col-span-12 md:col-span-6 rounded-r-xl shadow-2xl h-full object-cover" />
+                <img src="https://imgix.cosmicjs.com/bdc03c70-d062-11f0-9412-e12f763e1300-side-view-man-repairing-motorcycle.jpg?w=1200" class="col-span-12 md:col-span-6 rounded-r-xl shadow-2xl h-full object-cover" />
 
                 <div class="col-span-12 md:col-span-6 lg:py-8 max-w-2xl">
                     <Container>
                         <div class="space-y-8">
-                            <div class="text-white text-balance w-fit">
-                                <h2>Hey there, my name is Chris Porter.</h2>
-                                <hr class="bg-mongoose-400 h-3 border-0" />
-                            </div>
+                            <h2 class="heading-underline text-balance">Hey there, my name is Chris Porter.</h2>
 
                             <div class="text-mongoose-50 text-lg font-light space-y-6 tracking-normal">
                                 <p>As the owner and operator of Flying Wrenches Mobile Powersports, my goal is simple: to make maintaining your powersports equipment as convenient as possible. I bring the shop to you!</p>
@@ -95,10 +93,7 @@ import Service from "@/components/content/Service";
             <Container>
                 <div class="grid grid-cols-12 gap-y-12 lg:gap-y-0 lg:gap-x-12 xl:gap-x-20">
                     <div class="col-span-12 lg:col-span-4 space-y-8">
-                        <div class="w-fit">
-                            <h2>Our Services</h2>
-                            <hr class="bg-mongoose-400 h-3 border-0" />
-                        </div>
+                        <h2 class="heading-underline text-mongoose-950!">Our Services</h2>
 
                         <div class="space-y-6 mt-6 md:max-w-2xl">
                             <p class="text-mongoose-950">From routine manufacturer maintenance to complex engine rebuilds, Dripping Springs Outdoor Powersports is your trusted partner for reliability and performance.</p>
@@ -114,10 +109,10 @@ import Service from "@/components/content/Service";
         </Section>
     </div>
 
-    <div class="bg-mongoose-700">
+    <div class="bg-mongoose-900">
         <Container>
             <Section>
-                <div class="space-y-8">
+                <div class="md:w-175 mx-auto space-y-8">
                     <svg viewBox="0 0 84 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="size-16">
                         <path
                             d="M0.0260487 65.3952L0.0244751 49.0957C0.0253751 45.899 0.27755 42.1717 4.52635 41.7957C5.73885 41.6882 7.08035 41.8447 8.30735 41.847L18.2423 41.8447C18.9428 41.8437 20.7823 41.703 21.3561 41.8452C21.6483 42.3407 21.9173 42.8397 22.1708 43.3562C21.5273 43.772 20.9396 44.5987 20.3911 45.154L2.18305 63.429C1.49075 64.1182 0.821524 64.8227 0.0260487 65.3952Z"
@@ -145,19 +140,17 @@ import Service from "@/components/content/Service";
                             fill="#EA7754"></path>
                     </svg>
 
-                    <div class="grid grid-cols-12 gap-y-10 lg:gap-20">
-                        <div class="col-span-12 lg:col-span-4 space-y-4">
-                            <h4 class="text-mongoose-950 text-balance">Servicing the Greater Austin Area</h4>
-                            <p class="text-mongoose-900 text-lg">
-                                Our service area is rooted in the heart of the Texas Hill Country, stretching across Dripping Springs and Wimberley. We proudly extend our expert powersports service throughout the greater Austin area, including the communities of West Lake Hills, Tarrytown, Barton
-                                Creek, and Rollingwood.
-                            </p>
-                        </div>
-
-                        <div class="col-span-12 lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-12">
-                            {[...Array(6)].map((_, index) => <Review />)}
-                        </div>
+                    <div class="col-span-12 lg:col-span-4 space-y-4">
+                        <h4 class="text-balance">Servicing the Greater Austin Area</h4>
+                        <p class="text-mongoose-200 text-lg">
+                            Our service area is rooted in the heart of the Texas Hill Country, stretching across Dripping Springs and Wimberley. We proudly extend our expert powersports service throughout the greater Austin area, including the communities of West Lake Hills, Tarrytown, Barton Creek,
+                            and Rollingwood.
+                        </p>
                     </div>
+                </div>
+
+                <div class="columns-1 md:columns-2 lg:columns-3 space-y-6 lg:space-y-12 gap-x-6 lg:gap-x-12">
+                    {reviews.map((review, index) => <Review review={review} />)}
                 </div>
             </Section>
         </Container>

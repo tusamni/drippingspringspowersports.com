@@ -1,9 +1,17 @@
-<div class="flex flex-col gap-4 bg-white rounded-lg p-8">
-    <div class="flex items-center gap-4">
-        <img src="https://imgix.cosmicjs.com/199cd520-ce66-11f0-ab33-09cb31e91e16-appic-DfWPponVHb0-unsplash.jpg?w=200" class="size-12 border-mongoose-300 border-r-4 border-b-3 rounded-full object-cover shadow-sm" />
+---
+// props
+export interface Props {
+    review: Object;
+}
+const { review } = Astro.props;
+---
+
+<div class="flex flex-col gap-4 bg-radial-[at_90%_90%] from-white via-mongoose-100 to-mongoose-100 rounded-lg p-8 shadow-2xl break-inside-avoid-column">
+    <div class="flex flex-col xl:flex-row xl:items-center gap-4">
+        <img src="https://imgix.cosmicjs.com/199cd520-ce66-11f0-ab33-09cb31e91e16-appic-DfWPponVHb0-unsplash.jpg?w=200" class="size-12 xl:size-16 border-mongoose-300 border-r-4 border-b-3 rounded-full object-cover shadow-sm" />
 
         <div class="space-y-1">
-            <div class="font-semibold text-xl font-heading uppercase tracking-tight text-mongoose-950">A true rockstar</div>
+            <div class="font-semibold text-lg lg:text-xl font-heading text-balance uppercase tracking-tight text-mongoose-950 leading-tight">{review.title}</div>
 
             <div class="flex">
                 {
@@ -21,10 +29,10 @@
         </div>
     </div>
 
-    <div class="text-mongoose-900 font-light">Chris was awesome. He's always on schedule and is always very reasonably priced and helpful. He went way beyond the call of duty in assisting me with my temperamental chopper.</div>
+    <div class="text-mongoose-900 text-sm font-light">{review.content}</div>
 
     <div>
-        <div class="text-mongoose-950 text-lg font-medium">Sean P.</div>
-        <div class="text-mongoose-900 text-sm">KTM Repair in Buda, TX</div>
+        <div class="text-black text-lg font-medium">{review.name}</div>
+        <div class="text-mongoose-900 text-sm">{review.repair} in {review.location}</div>
     </div>
 </div>
