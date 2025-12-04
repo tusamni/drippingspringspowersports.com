@@ -26,6 +26,9 @@ export default defineConfig({
     site: "https://eriksolsen.com",
     trailingSlash: "always",
     vite: {
-        plugins: [tailwindcss()]
+        plugins: [tailwindcss()],
+        optimizeDeps: {
+            exclude: ["alpinejs"]
+        }
     },
 });
