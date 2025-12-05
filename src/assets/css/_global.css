@@ -57,7 +57,7 @@ details {
     }
 
     &[open]>summary {
-        @apply bg-mongoose-800;
+        @apply bg-mongoose-200/20;
     }
 }
 

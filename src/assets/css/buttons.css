@@ -10,7 +10,7 @@
 	}
 
 	&.button-success {
-		@apply text-white bg-mongoose-700 hover:bg-mongoose-600 focus:outline-none;
+		@apply text-white bg-emerald-700 hover:bg-emerald-600 focus:outline-none;
 	}
 
 	&.button-ghost {

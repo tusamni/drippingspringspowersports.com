@@ -1,4 +1,6 @@
 ---
+import { siteConfig } from "@/config";
+
 import Container from "@/components/layout/Container";
 import Logo from "@/components/logos/Logo";
 import LogoSquare from "@/components/logos/LogoSquare";
@@ -27,13 +29,15 @@ import MegaMenu from "@/components/navigation/MegaMenu";
                     </ul>
 
                     <div class="flex flex-row md:w-full lg:w-auto justify-end items-center gap-3 md:gap-6">
-                        <div class="hidden sm:block text-base lg:text-lg tracking-tight text-white antialiased font-medium">(512) 560-4223</div>
+                        <div class="hidden sm:block text-base lg:text-lg tracking-tight text-white antialiased font-medium">
+                            <a href=`tel:${siteConfig.phone.base}`>{siteConfig.phone.formatted}</a>
+                        </div>
                         <div class="sm:hidden">
-                            <a href="/contact/" class="button button-primary button-inverse text-base!">Call</a>
+                            <a href=`tel:${siteConfig.phone.base}` class="button button-primary button-inverse text-base!">Call</a>
                         </div>
 
                         <div>
-                            <a href="/contact/" class="hidden! md:block! button button-primary button-inverse">Schedule</a>
+                            <a href="/contact/" class="hidden! md:block! button button-success">Schedule</a>
                             <a href="/contact/" class="md:hidden! button button-success text-base!">Email</a>
                         </div>
 
