@@ -5,7 +5,7 @@
 		@apply text-white bg-mongoose-950 hover:bg-mongoose-800 focus:outline-none;
 
 		&.button-inverse {
-			@apply text-mongoose-900 bg-white hover:bg-mongoose-100;
+			@apply text-black bg-white hover:bg-mongoose-100;
 		}
 	}
 
