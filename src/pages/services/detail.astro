@@ -1,45 +1,69 @@
 ---
 import MainLayout from "@/layouts/MainLayout";
 
+import { service } from "@/config";
 import Container from "@/components/layout/Container";
+import ServiceDetail from "@/components/content/ServiceDetail";
 import Review from "@/components/content/Review";
 import Section from "@/components/layout/Section";
 import Service from "@/components/content/Service";
 ---
 
 <MainLayout>
-    <div class="bg-radial-[at_90%_20%] md:bg-radial-[at_50%_50%] to-mongoose-950 from-mongoose-300">
+    <div class="bg-radial-[at_100%_0%] sm:to-mongoose-950 sm:from-mongoose-300 from-pinecone-700 to-pinecone-600">
         <Section>
             <Container>
-                <h1 class="text-white text-balance max-w-4xl">Dirtbike Repair &amp; Service</h1>
+                <div class="relative">
+                    <svg viewBox="0 0 1148 1624" xmlns="http://www.w3.org/2000/svg" class="h-80 sm:h-120 absolute -top-15 right-0 text-pinecone-500 sm:text-white/10">
+                        <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M205.939 1623.18C169.868 1618.45 145.349 1606.97 117.458 1579.99C87.3293 1550.86 64.5598 1502.97 55.47 1458.77C38.22 1374.95 49.3098 1297.82 81.4387 1220.69C101.329 1174.17 136.318 1126.9 175.97 1098.53C219.431 1067.45 267.478 1056.57 316.318 1073.39L351.779 1030.07C334.091 1022.96 323.329 1020.37 308.978 1007.87C301.579 1011.58 292.068 1012.38 282.728 1007.87C270.259 1001.85 272.88 982.419 265.779 992.74C257.751 1004.42 251.751 1007.38 230.9 1009.95C189.868 1015 173.2 1015.91 122.029 1015.86C76.7512 1015.82 28.9583 1014.7 21.4778 1013.53C-14.4207 1007.88 1.70825 940.048 19.2786 934.279C31.3098 930.337 47.4387 938.349 49.22 933.388C53.2278 922.036 148.329 864.587 150.009 861.068C158.079 844.177 145.911 848.786 174.708 819.779C199.568 794.747 228.31 771.208 248.298 759.458C261.091 751.927 259.509 755.298 258.251 742.517C254.958 705.427 258.63 708.337 250.181 712.587C228.779 723.329 221.888 721.087 197.279 710.216C174.388 700.107 163.99 693.298 147.548 677.689C118.708 650.267 99.7981 610.298 101.65 572.036C104.599 510.837 127.079 520.368 120.361 499.279C114.458 480.798 122.599 473.759 119.611 460.497L118.368 441.189C118.431 440.927 128.318 421.138 129.63 415.876L132.099 390.947L127.818 380.107C114.411 346.157 122.841 347.099 111.9 350.099C90.759 355.9 78.9778 347.638 69.009 324.818C59.2708 302.517 59.8997 292.197 72.0012 276.548C82.8801 262.478 119.4 223.029 136.548 206.818C161.939 182.837 170.251 179.466 203.939 179.529C222.349 179.556 241.771 181.197 262.88 184.478C285.419 187.966 274.15 186.556 286.521 179.228C289.361 177.556 289.931 177.466 297.169 177.607C310.161 177.849 307.74 179.939 313.521 174.388C318.841 169.267 318.728 169.779 315.208 166.157C306.431 157.138 298.419 147.247 296.2 137.759C293.2 124.9 297.47 110.747 295.669 108.638C290.771 102.868 292.618 88.0793 300.021 73.6887C305.95 62.1379 312.501 65.7981 312.501 63.5168C312.501 62.0793 317.47 52.9192 320.751 48.3176C332.798 31.427 358.708 14.4465 386.411 5.27857C406.111 -1.24096 421.618 -1.66284 445.548 3.68872C496.009 14.9895 495.349 33.7161 501.919 36.2278C523.361 44.3762 572.439 125.197 570.099 136.939C569.618 139.337 558.861 137.068 555.228 136.439C523.259 130.9 527.04 129.536 525.38 137.669C522.861 150.068 507.978 185.466 500.97 195.767C490.779 210.74 490.29 198.208 491.65 216.708C492.861 233.306 492.009 239.49 487.81 244.388C482.708 250.349 465.88 262.388 455.728 269.228C469.751 286.017 473.341 279.536 482.65 292.247C485.228 295.779 484.939 295.626 488.978 292.657C504.521 281.216 529.911 287.568 559.06 291.009C583.138 293.829 616.021 298.638 627.829 301.036C645.259 304.599 649.958 306.829 658.228 315.509C674.501 332.579 669.829 335.767 675.13 329.618C681.22 322.548 713.818 290.599 721.388 284.267C742.65 266.49 759.79 255.509 780.329 242.388C812.591 221.767 839.611 215.966 878.24 216.599C899.251 216.947 908.72 217.919 921.728 221.126C938.38 225.216 962.818 244.9 952.829 262.947C949.45 269.056 942.368 274.216 926.04 282.439C886.611 302.337 888.181 276.939 862.88 301.126L821.15 345.599C838.29 364.118 848.47 380.4 827.4 402.357C819.458 410.638 782.04 440.857 773.579 440.857C771.478 440.857 772.29 442.618 776.841 448.017L804.47 483.466C880.919 367.759 1022.72 319.837 1103.02 437.056C1199.17 577.419 1130.8 837.447 992.099 929.427C943.669 961.548 884.611 974.618 833.091 948.548C828.868 946.407 828.611 947.927 828.611 947.079C828.611 946.716 826.9 945.419 824.79 944.228C781.29 919.407 751.911 868.056 739.478 819.447C729.048 778.626 728.611 754.318 728.638 713.618C716.048 737.107 714.329 737.157 691.251 737.208L696.829 793.806C699.661 843.368 691.65 926.9 681.63 952.306L674.579 965.888C681.161 990.177 675.771 1018.42 659.618 1035.68C651.4 1044.47 637.56 1052.38 635.349 1056.85C630.22 1067.24 608.759 1062.07 579.368 1091.75L570.868 1100.34L561.181 1099.46C557.38 1106.14 548.63 1120.92 546.521 1121.73C544.7 1122.43 533.118 1122.28 531.74 1121.55C527.888 1119.49 527.599 1107.63 527.599 1100.52C519.669 1116.35 519.759 1116.77 502.29 1112.28C500.931 1118.81 498.99 1122.54 481.45 1158.09L438.259 1246.33C436.759 1254.11 461.638 1348.72 407.349 1472.14C378.118 1540.72 314.599 1611.53 238.388 1622.57C231.888 1623.51 210.939 1623.91 205.939 1623.18ZM426.368 575.947L436.54 558.618C437.368 555.657 431.111 453.048 438.661 434.767C440.111 431.259 426.478 437.4 412.95 416.259C403.329 430.677 401.728 431.099 397.079 449.818C393.06 465.978 388.638 472.716 387.431 479.638C384.029 499.056 368.138 499.368 366.779 502.708L365.111 529.427C383.138 529.427 391.611 531.349 411.861 550.849C419.911 558.607 421.728 562.118 419.599 574.587C418.579 580.517 420.361 585.368 420.97 585.349C421.189 585.349 423.618 581.107 426.368 575.947ZM829.279 600.4L856.138 631.099C857.009 630.849 862.611 622.966 865.79 621.107C869.2 619.126 877.708 621.157 885.001 622.15C897.611 608.849 901.368 609.169 918.361 608.517C923.38 597.857 941.361 582.329 957.079 574.419C985.978 559.888 1019.14 565.407 1032.42 593.029C1042.09 613.126 1043.5 658.177 1035.38 688.318C1008.12 789.439 913.138 830.939 887.99 753.529C882.478 736.536 881.618 722.607 882.361 706.99C877.419 702.4 869.9 694.478 869.9 688.876C869.9 681.626 867.22 689.868 854.591 695.759C840.439 702.349 847.798 693.298 830.45 692.888C818.099 692.599 816.458 690.329 809.501 683.966C808.029 702.068 807.111 724.048 808.618 741.536C825.368 936.079 1017.08 899.427 1058.95 641.978C1062.06 622.829 1063.11 580.068 1060.85 564.126C1051.19 496.017 1008.4 436.548 941.029 462.509C867.368 490.888 828.759 599.009 829.279 600.4ZM244.228 1394.45L244.681 1400.97C246.728 1430.21 270.388 1458.41 300.13 1453.18C302.618 1452.74 304.771 1452.51 304.931 1452.65C305.54 1453.22 253.021 1536.24 202.599 1497.39C172.259 1474.02 164.021 1419.83 164.388 1419.83C166.509 1419.83 167.939 1426.06 187.29 1426.09C217.31 1426.13 226.829 1413.29 244.228 1394.45ZM340.861 1269.14C339.931 1260.51 333.829 1229.17 332.888 1228.23L306.501 1260.99C340.79 1263.4 338.759 1273.31 341.001 1273.31C341.161 1273.31 341.099 1271.43 340.861 1269.14ZM183.329 1262.31L224.068 1198.47C201.579 1216.4 181.958 1245.91 173.048 1275.94C170.74 1283.7 175.22 1275.09 183.329 1262.31Z"
+                            fill="currentColor"></path>
+                    </svg>
+
+                    <h1 class="text-white text-balance max-w-4xl relative">Dirtbike Repair &amp; Service</h1>
+                </div>
             </Container>
 
-            <Container size="xlarge">
-                <div class="grid grid-cols-6 grid-rows-2 gap-6 h-150">
-                    <img src="https://imgix.cosmicjs.com/ad0c1080-d160-11f0-b20e-1d251587b0cd-vikram-sundaramoorthy-pd8CfO07lBU-unsplash.jpg?w=1500" class="row-span-2 col-span-4  h-full w-full object-cover shadow-2xl rounded-lg" />
+            <Container mobilePadding={false} size="xlarge" classes="relative z-10">
+                <div class="grid grid-cols-6 grid-rows-2 gap-6 h-70 sm:h-150">
+                    <img src="https://imgix.cosmicjs.com/ad0c1080-d160-11f0-b20e-1d251587b0cd-vikram-sundaramoorthy-pd8CfO07lBU-unsplash.jpg?w=1500" class="row-span-2 col-span-4 h-full w-full object-cover shadow-2xl rounded-lg" />
                     <img src="https://imgix.cosmicjs.com/ad0c1080-d160-11f0-b20e-1d251587b0cd-vikram-sundaramoorthy-pd8CfO07lBU-unsplash.jpg?w=1500" class="col-span-2 h-full w-full object-cover shadow-2xl rounded-lg" />
                     <img src="https://imgix.cosmicjs.com/ad0c1080-d160-11f0-b20e-1d251587b0cd-vikram-sundaramoorthy-pd8CfO07lBU-unsplash.jpg?w=1500" class="col-span-2 h-full w-full object-cover shadow-2xl rounded-lg" />
                 </div>
             </Container>
 
             <Container>
-                <div class="col-span-2 md:col-span-1 space-y-8">
-                    <h2 class="heading-underline">Our Story</h2>
-                    <div class="text-mongoose-100 text-lg font-base space-y-6 tracking-normal">
-                        <p>Born and raised right here in Dripping Springs, Chris and Katie Porter aren't just the owners of Dripping Springs Outdoor Powersports—they are lifelong members of the community whose story is deeply rooted in the Central Texas dirt.</p>
-                        <p>
-                            Their connection wasn't forged over coffee or a movie; it was built on the track. Chris and Katie met through their shared, intense love for dirt bike racing. From local trails to competitive circuits, they spent their early years side-by-side, pushing limits and
-                            learning the mechanics of what it takes to keep a machine performing at its peak.
-                        </p>
-                        <p>
-                            After they married, the Porters realized that their combined knowledge of racing, diagnostics, and hands-on repair filled a clear need in their growing town. They took their passion and expertise and launched their first venture: a mobile powersports repair business.
-                            They spent years driving to ranches and homes across Hays County, diagnosing issues right where the customer broke down.
-                        </p>
-                        <p>This mobile experience taught them the true value of speed, reliability, and local service. Now, they have transitioned from the mobile unit to our dedicated, state-of-the-art repair shop, bringing that same commitment to the heart of Dripping Springs.</p>
-                        <p>
-                            Dripping Springs Outdoor Powersports isn't just a business; it's the culmination of their shared history, built on a foundation of local pride and the understanding that when you're on the trails, your equipment needs to be perfect. Chris, Katie, and their team are
-                            here to ensure every rider can experience the thrill of the ride, safely and reliably, every time.
-                        </p>
+                <div class="grid grid-cols-4 gap-12">
+                    <div class="col-span-4 sm:col-span-1 flex flex-col space-y-6">
+                        <h2 class="heading-underline">Our Services</h2>
+                        <p class="text-mongoose-100">If the specific service or repair you are looking for was not detailed in the list above, please remember that we offer a comprehensive range of maintenance and repair solutions that go well beyond the common examples provided.</p>
+                    </div>
+
+                    <div class="col-span-4 sm:col-span-3 grid grid-cols-1 sm:grid-cols-3 gap-8">
+                        {
+                            service.map((s) => (
+                                <div class="space-y-1 h-full">
+                                    <div class="font-medium font-heading text-mongoose-50 text-lg tracking-tight uppercase">{s.title}</div>
+                                    <div class="text-mongoose-100 font-light">{s.description}</div>
+                                </div>
+                            ))
+                        }
+                    </div>
+
+                    <div class="col-span-4 w-fit place-self-center button button-primary button-inverse">Book Your Service!</div>
+                </div>
+            </Container>
+
+            <Container>
+                <div class="space-y-16">
+                    <div class="flex justify-center">
+                        <h2 class="heading-underline text-center">Recent Services</h2>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-4 gap-8">
+                        {[...Array(4)].map((_, index) => <ServiceDetail />)}
                     </div>
                 </div>
             </Container>

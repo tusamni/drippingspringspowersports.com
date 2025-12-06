@@ -1,5 +1,3 @@
-import service from "@astrojs/netlify/image-service.js";
-
 export const siteConfig = {
 	name: "Dripping Springs Outdoor Powersports",
 	nameShort: "DS Outdoor Powersports",
@@ -160,5 +158,48 @@ export const reviews = [
 		title: "Exceptional Service and Expertise",
 		content: "Once again my bike sat too long and needed a carb clean, new battery, and a few other minor things. I really didn't want to have to tow my bike in to a shop, so I decided to try Flying Wrenches. Chris came out a few days later and got my bike up running in a couple of hours. It fires right up and sounds great.",
 		rating: 5,
+	}
+]
+
+export const service = [
+	{
+		title: "Oil & Filter Change",
+		description: "Routine replacement of engine oil and oil filter to ensure proper lubrication and cooling of internal engine components. Critical for engine longevity."
+	},
+	{
+		title: "Air Filter Service",
+		description: "Cleaning or replacing the air filter to ensure the engine gets clean air. A dirty filter reduces performance and can lead to internal wear."
+	},
+	{
+		title: "Chain & Sprocket Replacement",
+		description: "Inspection and replacement of the drive chain and front/rear sprockets when wear is visible (hooked teeth, stretched chain). Essential for power delivery."
+	},
+	{
+		title: "Brake System Service",
+		description: "Checking pad wear, inspecting rotors, bleeding brake fluid, and replacing worn components (calipers, lines, masters). Crucial for safety."
+	},
+	{
+		title: "Tire & Tube Replacement",
+		description: "Replacing worn tires and/or punctured inner tubes. Includes balancing and checking tire pressure for optimal traction and handling."
+	},
+	{
+		title: "Clutch Adjustment/Service",
+		description: "Adjusting cable free-play, inspecting friction plates and steel plates, and replacing components as needed to ensure smooth engagement and prevent slippage."
+	},
+	{
+		title: "Top-End Rebuild",
+		description: "Replacement of the piston, piston rings, and often the cylinder gasket and connecting rod bearing. A common service for 2-stroke engines, or when compression drops in a 4-stroke."
+	},
+	{
+		title: "Suspension Fork/Shock Service",
+		description: "Replacing worn fork seals, bushings, and oil (forks), or servicing the damper (shock) to maintain proper suspension performance and prevent leaks."
+	},
+	{
+		title: "Carburetor/Fuel Injection Cleaning",
+		description: "Disassembling, cleaning, and tuning the carburetor, or inspecting and cleaning fuel injectors and the fuel system to maintain correct fuel mixture."
+	},
+	{
+		title: "Bearing Inspection & Grease",
+		description: "Checking and greasing steering head bearings, swingarm pivot bearings, and wheel bearings. Prevents play, ensures smooth movement, and prolongs component life."
 	}
 ]

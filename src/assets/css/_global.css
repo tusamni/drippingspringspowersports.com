@@ -18,24 +18,24 @@
     --color-mongoose-900: #594335;
     --color-mongoose-950: #2f221b;
 
-    --color-cognac-50: #fdf5ef;
-    --color-cognac-100: #fae8da;
-    --color-cognac-200: #f5cfb3;
-    --color-cognac-300: #eeae83;
-    --color-cognac-400: #e68351;
-    --color-cognac-500: #e0632f;
-    --color-cognac-600: #d24d24;
-    --color-cognac-700: #aa381f;
-    --color-cognac-800: #8b2f21;
-    --color-cognac-900: #702a1e;
-    --color-cognac-950: #3c130e;
+    --color-pinecone-50: #f5f5f1;
+    --color-pinecone-100: #e6e4db;
+    --color-pinecone-200: #cecaba;
+    --color-pinecone-300: #b2aa92;
+    --color-pinecone-400: #9c9073;
+    --color-pinecone-500: #8d7f65;
+    --color-pinecone-600: #796a55;
+    --color-pinecone-700: #645648;
+    --color-pinecone-800: #54483f;
+    --color-pinecone-900: #4a3f39;
+    --color-pinecone-950: #29221f;
 
     --font-heading: var(--font-heading);
 }
 
 body {
     font-family: var(--font-manrope);
-    @apply tracking-wide;
+    @apply tracking-wide overflow-x-hidden;
 }
 
 [x-cloak] {
