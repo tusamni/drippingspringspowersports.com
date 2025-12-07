@@ -8,6 +8,19 @@ export interface Props {
 const { topPaddingStarts = "none", bottomPaddingStarts = "none", classes } = Astro.props;
 ---
 
-<div class:list={["space-y-16 lg:space-y-32", topPaddingStarts === "none" && "pt-16 lg:pt-32", topPaddingStarts === "small" && "sm:pt-16 lg:pt-32", topPaddingStarts === "medium" && "md:pt-16 lg:pt-32", topPaddingStarts === "large" && "lg:pt-32", bottomPaddingStarts === "none" && "pb-16 lg:pb-32", bottomPaddingStarts === "small" && "sm:pb-16 lg:pb-32", bottomPaddingStarts === "medium" && "md:pb-16 lg:pb-32", bottomPaddingStarts === "large" && "lg:pb-32", classes]}>
+<div
+    class:list={[
+        "space-y-24 lg:space-y-32",
+        topPaddingStarts === "none" && "pt-16 lg:pt-32",
+        topPaddingStarts === "small" && "sm:pt-16 lg:pt-32",
+        topPaddingStarts === "medium" && "md:pt-16 lg:pt-32",
+        topPaddingStarts === "large" && "lg:pt-32",
+        bottomPaddingStarts === "none" && "pb-16 lg:pb-32",
+        bottomPaddingStarts === "small" && "sm:pb-16 lg:pb-32",
+        bottomPaddingStarts === "medium" && "md:pb-16 lg:pb-32",
+        bottomPaddingStarts === "large" && "lg:pb-32",
+        classes,
+    ]}
+>
     <slot />
 </div>

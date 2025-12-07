@@ -2,6 +2,7 @@
 @plugin "@tailwindcss/forms";
 
 @import "./buttons";
+@import "./content";
 @import "./forms";
 @import "./typography";
 
@@ -40,37 +41,4 @@ body {
 
 [x-cloak] {
     display: none !important;
-}
-
-details {
-    @apply transition-all duration-500;
-
-    &::details-content {
-        @apply h-0 overflow-clip;
-        transition:
-            all 0.5s ease,
-            content-visibility 0.5s allow-discrete;
-    }
-
-    &[open]::details-content {
-        @apply h-auto pt-3 pb-6;
-    }
-
-    &[open]>summary {
-        @apply bg-mongoose-200/20;
-    }
-}
-
-summary {
-    &::-webkit-details-marker {
-        @apply hidden;
-    }
-
-    &:after {
-        content: "\002B";
-    }
-
-    [open] &::after {
-        content: "\002D";
-    }
 }

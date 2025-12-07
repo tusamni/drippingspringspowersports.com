@@ -6,7 +6,7 @@ import Container from "@/components/layout/Container";
 import ServiceDetail from "@/components/content/ServiceDetail";
 import Review from "@/components/content/Review";
 import Section from "@/components/layout/Section";
-import Service from "@/components/content/Service";
+import ServiceItem from "@/components/content/ServiceItem";
 ---
 
 <MainLayout>
@@ -14,7 +14,7 @@ import Service from "@/components/content/Service";
         <Section>
             <Container>
                 <div class="relative">
-                    <svg viewBox="0 0 1148 1624" xmlns="http://www.w3.org/2000/svg" class="h-80 sm:h-120 absolute -top-15 right-0 text-pinecone-500 sm:text-white/10">
+                    <svg viewBox="0 0 1148 1624" xmlns="http://www.w3.org/2000/svg" class="h-80 sm:h-120 absolute -top-15 right-0 text-pinecone-600/50 sm:text-white/10">
                         <path
                             fill-rule="evenodd"
                             clip-rule="evenodd"
@@ -46,7 +46,7 @@ import Service from "@/components/content/Service";
                             service.map((s) => (
                                 <div class="space-y-1 h-full">
                                     <div class="font-medium font-heading text-mongoose-50 text-lg tracking-tight uppercase">{s.title}</div>
-                                    <div class="text-mongoose-100 font-light">{s.description}</div>
+                                    <div class="text-mongoose-100 text-sm sm:text-base font-light">{s.description}</div>
                                 </div>
                             ))
                         }

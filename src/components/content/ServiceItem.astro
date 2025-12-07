@@ -1,0 +1,18 @@
+---
+// props
+export interface Props {
+    title: string;
+    description: string;
+}
+const { title, description } = Astro.props;
+---
+
+<details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+    <summary itemprop="name" class="cursor-pointer transition-all py-4 px-3 sm:py-6 sm:px-4 lg:-mx-4 flex justify-between text-white text-base sm:text-xl lg:text-2xl tracking-tight text-left">{title}</summary>
+
+    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <div itemprop="text" class="space-y-6 text-mongoose-50 text-sm sm:text-base px-3 sm:px-4 lg:px-0 sm:leading-7 font-light">
+            <p>{description}</p>
+        </div>
+    </div>
+</details>
