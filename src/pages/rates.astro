@@ -9,15 +9,12 @@ import Service from "@/components/content/Service";
 
 <MainLayout>
     <div class="bg-radial-[at_90%_60%] sm:to-mongoose-950 sm:from-mongoose-300 from-pinecone-700 to-pinecone-600 space-y-8 lg:space-y-12">
-        <Section>
+        <Section noBottomPadding={true}>
             <Container>
                 <h1 class="text-white text-balance">Powersport Repair and Service Rates</h1>
 
                 <div class="text-mongoose-100 text-xl md:text-2xl space-y-6 tracking -tight leading-normal font-light max-w-5xl mt-12">
-                    <p>
-                        We believe in complete honesty and transparency when it comes to service costs. At Dripping Springs Outdoor Powersports, you will never encounter hidden fees or surprise charges. We are committed to being upfront about our competitive labor rate and the total cost of your
-                        repair or service.
-                    </p>
+                    <p>We believe in complete honesty and transparency when it comes to service costs. At Dripping Springs Outdoor Powersports, you will never encounter hidden fees or surprise charges. We are committed to being upfront about our competitive labor rate and the total cost of your repair or service.</p>
                 </div>
 
                 <div class="flex flex-col gap-6 mt-12 md:ml-12">
@@ -33,29 +30,23 @@ import Service from "@/components/content/Service";
                 </div>
 
                 <div class="text-mongoose-100 text-lg space-y-6 tracking-normal max-w-4xl mt-12">
-                    <p>
-                        Your total repair cost is calculated by combining our Service Fee and the Hourly Labor Rate. The Service Fee is a flat charge that covers the cost of all trips and logistical coordination related to your original service visit—whether it involves initial diagnostics, a return
-                        trip to install parts, or final testing.
-                    </p>
-                    <p>
-                        Our competitive Hourly Labor Rate is then applied only to the actual time our certified technician spends working on your equipment. Any necessary replacement parts, such as filters, fluids, or major components, are charged separately at their wholesale cost plus a small
-                        markup. This ensures you know exactly what you are paying for: trip coverage, hands-on expertise, and necessary parts.
-                    </p>
+                    <p>Your total repair cost is calculated by combining our Service Fee and the Hourly Labor Rate. The Service Fee is a flat charge that covers the cost of all trips and logistical coordination related to your original service visit—whether it involves initial diagnostics, a return trip to install parts, or final testing.</p>
+                    <p>Our competitive Hourly Labor Rate is then applied only to the actual time our certified technician spends working on your equipment. Any necessary replacement parts, such as filters, fluids, or major components, are charged separately at their wholesale cost plus a small markup. This ensures you know exactly what you are paying for: trip coverage, hands-on expertise, and necessary parts.</p>
                 </div>
             </Container>
 
             <div>
-                <div class="grid grid-cols-4 sm:grid-cols-8 sm:w-[125vw] sm:-translate-x-40 gap-4">
-                    <img src="https://imgix.cosmicjs.com/bdc03c70-d062-11f0-9412-e12f763e1300-side-view-man-repairing-motorcycle.jpg?w=700" class="shadow-2xl w-full h-30 sm:h-60 object-cover col-span-2" />
-                    <img src="https://imgix.cosmicjs.com/bdc03c70-d062-11f0-9412-e12f763e1300-side-view-man-repairing-motorcycle.jpg?w=700" class="shadow-2xl w-full h-30 sm:h-60 object-cover col-span-2" />
-                    <img src="https://imgix.cosmicjs.com/bdc03c70-d062-11f0-9412-e12f763e1300-side-view-man-repairing-motorcycle.jpg?w=700" class="shadow-2xl w-full h-30 sm:h-60 object-cover col-span-2" />
-                    <img src="https://imgix.cosmicjs.com/bdc03c70-d062-11f0-9412-e12f763e1300-side-view-man-repairing-motorcycle.jpg?w=700" class="shadow-2xl w-full h-30 sm:h-60 object-cover col-span-2" />
+                <div class="grid grid-cols-8 w-[125vw] sm:-translate-x-40 gap-4">
+                    <img src="https://imgix.cosmicjs.com/bdc03c70-d062-11f0-9412-e12f763e1300-side-view-man-repairing-motorcycle.jpg?w=700" class="shadow-2xl w-full h-40 sm:h-60 object-cover col-span-2" />
+                    <img src="https://imgix.cosmicjs.com/bdc03c70-d062-11f0-9412-e12f763e1300-side-view-man-repairing-motorcycle.jpg?w=700" class="shadow-2xl w-full h-40 sm:h-60 object-cover col-span-2" />
+                    <img src="https://imgix.cosmicjs.com/bdc03c70-d062-11f0-9412-e12f763e1300-side-view-man-repairing-motorcycle.jpg?w=700" class="shadow-2xl w-full h-40 sm:h-60 object-cover col-span-2" />
+                    <img src="https://imgix.cosmicjs.com/bdc03c70-d062-11f0-9412-e12f763e1300-side-view-man-repairing-motorcycle.jpg?w=700" class="shadow-2xl w-full h-40 sm:h-60 object-cover col-span-2" />
                 </div>
-                <div class="grid grid-cols-8 sm:w-[125vw] sm:-translate-x-10 gap-4 mt-4">
-                    <img src="https://imgix.cosmicjs.com/bdc03c70-d062-11f0-9412-e12f763e1300-side-view-man-repairing-motorcycle.jpg?w=700" class="shadow-2xl w-full h-25 sm:h-60 object-cover col-span-2" />
-                    <img src="https://imgix.cosmicjs.com/bdc03c70-d062-11f0-9412-e12f763e1300-side-view-man-repairing-motorcycle.jpg?w=700" class="shadow-2xl w-full h-25 sm:h-60 object-cover col-span-2" />
-                    <img src="https://imgix.cosmicjs.com/bdc03c70-d062-11f0-9412-e12f763e1300-side-view-man-repairing-motorcycle.jpg?w=700" class="shadow-2xl w-full h-25 sm:h-60 object-cover col-span-2" />
-                    <img src="https://imgix.cosmicjs.com/bdc03c70-d062-11f0-9412-e12f763e1300-side-view-man-repairing-motorcycle.jpg?w=700" class="shadow-2xl w-full h-25 sm:h-60 object-cover col-span-2" />
+                <div class="grid grid-cols-8 w-[125vw] -translate-x-10 gap-4 mt-4">
+                    <img src="https://imgix.cosmicjs.com/bdc03c70-d062-11f0-9412-e12f763e1300-side-view-man-repairing-motorcycle.jpg?w=700" class="shadow-2xl w-full h-40 sm:h-60 object-cover col-span-2" />
+                    <img src="https://imgix.cosmicjs.com/bdc03c70-d062-11f0-9412-e12f763e1300-side-view-man-repairing-motorcycle.jpg?w=700" class="shadow-2xl w-full h-40 sm:h-60 object-cover col-span-2" />
+                    <img src="https://imgix.cosmicjs.com/bdc03c70-d062-11f0-9412-e12f763e1300-side-view-man-repairing-motorcycle.jpg?w=700" class="shadow-2xl w-full h-40 sm:h-60 object-cover col-span-2" />
+                    <img src="https://imgix.cosmicjs.com/bdc03c70-d062-11f0-9412-e12f763e1300-side-view-man-repairing-motorcycle.jpg?w=700" class="shadow-2xl w-full h-40 sm:h-60 object-cover col-span-2" />
                 </div>
             </div>
         </Section>
