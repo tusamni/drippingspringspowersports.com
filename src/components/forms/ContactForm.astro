@@ -18,9 +18,7 @@ const { darkTheme = false, showPhone = true } = Astro.props;
 
 {!Astro.url.pathname.includes("contact") && <h2 class="text-white text-balance mb-4">Ready to get back on the trail?</h2>}
 
-<p class="text-mongoose-100 mb-6 text-lg">
-    Once you submit the form below, our service team will review your request and reach out within 24 business hours. We'll discuss the issues you're seeing, provide a preliminary estimate or diagnostic availability, and schedule a drop-off time that works for you.
-</p>
+<p class="text-mongoose-100 mb-6 max-sm:font-light md:text-lg">Once you submit the form below, our service team will review your request and reach out within 24 business hours. We'll discuss the issues you're seeing, provide a preliminary estimate or diagnostic availability, and schedule a drop-off time that works for you.</p>
 
 <form class="space-y-6" id="form-contact" method="POST">
     <div class="space-y-6">
