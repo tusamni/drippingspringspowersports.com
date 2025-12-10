@@ -33,38 +33,6 @@ import ServiceItem from "@/components/content/ServiceItem";
                     }
                 </div>
             </Container>
-
-            <Container>
-                <div class="grid grid-cols-12 gap-y-8 md:gap-12">
-                    <div class="col-span-12 md:col-span-4 xl:col-span-3 flex flex-col space-y-6">
-                        <h2 class="heading-underline">Services</h2>
-                        <p class="text-mongoose-100">If the specific service or repair you are looking for was not detailed in the list above, please remember that we offer a comprehensive range of maintenance and repair solutions that go well beyond the common examples provided.</p>
-                    </div>
-
-                    <div class="col-span-12 md:col-span-8 xl:col-span-8 columns-1 sm:columns-2 xl:columns-3 space-y-6 gap-6 lg:gap-8">
-                        {
-                            service.map((s) => (
-                                <div class="space-y-1 h-full break-inside-avoid-column">
-                                    <div class="font-medium font-heading text-mongoose-50 text-lg tracking-tight leading-tight uppercase">{s.title}</div>
-                                    <div class="text-mongoose-100 text-sm font-light">{s.description}</div>
-                                </div>
-                            ))
-                        }
-                    </div>
-
-                    <div class="col-span-12 w-fit place-self-center button button-ghost button-inverse">Book Your Service!</div>
-                </div>
-            </Container>
-
-            <Container>
-                <div class="space-y-8 md:space-y-16">
-                    <h2 class="heading-underline">Recent Services</h2>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
-                        {[...Array(4)].map((_, index) => <ServiceDetail />)}
-                    </div>
-                </div>
-            </Container>
         </Section>
     </div>
 </MainLayout>

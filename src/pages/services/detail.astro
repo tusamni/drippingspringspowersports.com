@@ -60,7 +60,7 @@ import ServiceItem from "@/components/content/ServiceItem";
                 <div class="space-y-8 md:space-y-16">
                     <h2 class="heading-underline">Recent Services</h2>
 
-                    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 max-md:divide-y max-sm:divide-pinecone-400 divide-pinecone-600 md:gap-8">
                         {[...Array(4)].map((_, index) => <ServiceDetail />)}
                     </div>
                 </div>
