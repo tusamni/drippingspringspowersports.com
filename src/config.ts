@@ -163,27 +163,27 @@ export const reviews = [
 
 export const service = [
 	{
-		title: "Oil & Filter Change",
+		title: "Oil Service",
 		description: "Routine replacement of engine oil and oil filter to ensure proper lubrication and cooling of internal engine components. Critical for engine longevity."
 	},
 	{
-		title: "Air Filter Service",
+		title: "Air Filter",
 		description: "Cleaning or replacing the air filter to ensure the engine gets clean air. A dirty filter reduces performance and can lead to internal wear."
 	},
 	{
-		title: "Chain & Sprocket Replacement",
+		title: "Chain & Sprocket",
 		description: "Inspection and replacement of the drive chain and front/rear sprockets when wear is visible (hooked teeth, stretched chain). Essential for power delivery."
 	},
 	{
-		title: "Brake System Service",
+		title: "Brake System",
 		description: "Checking pad wear, inspecting rotors, bleeding brake fluid, and replacing worn components (calipers, lines, masters). Crucial for safety."
 	},
 	{
-		title: "Tire & Tube Replacement",
+		title: "Tire Replacement",
 		description: "Replacing worn tires and/or punctured inner tubes. Includes balancing and checking tire pressure for optimal traction and handling."
 	},
 	{
-		title: "Clutch Adjustment/Service",
+		title: "Clutch Service",
 		description: "Adjusting cable free-play, inspecting friction plates and steel plates, and replacing components as needed to ensure smooth engagement and prevent slippage."
 	},
 	{
@@ -191,15 +191,15 @@ export const service = [
 		description: "Replacement of the piston, piston rings, and often the cylinder gasket and connecting rod bearing. A common service for 2-stroke engines, or when compression drops in a 4-stroke."
 	},
 	{
-		title: "Suspension Fork/Shock Service",
+		title: "Suspension Service",
 		description: "Replacing worn fork seals, bushings, and oil (forks), or servicing the damper (shock) to maintain proper suspension performance and prevent leaks."
 	},
 	{
-		title: "Carburetor/Fuel Injection Cleaning",
+		title: "Fuel System",
 		description: "Disassembling, cleaning, and tuning the carburetor, or inspecting and cleaning fuel injectors and the fuel system to maintain correct fuel mixture."
 	},
 	{
-		title: "Bearing Inspection & Grease",
+		title: "Bearing Service",
 		description: "Checking and greasing steering head bearings, swingarm pivot bearings, and wheel bearings. Prevents play, ensures smooth movement, and prolongs component life."
 	}
 ]

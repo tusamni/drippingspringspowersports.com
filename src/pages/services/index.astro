@@ -1,0 +1,70 @@
+---
+import MainLayout from "@/layouts/MainLayout";
+
+import { service } from "@/config";
+import Container from "@/components/layout/Container";
+import ServiceDetail from "@/components/content/ServiceDetail";
+import Review from "@/components/content/Review";
+import Section from "@/components/layout/Section";
+import ServiceItem from "@/components/content/ServiceItem";
+---
+
+<MainLayout>
+    <div class="bg-radial-[at_100%_0%] sm:to-mongoose-950 sm:from-mongoose-300 from-pinecone-700 to-pinecone-600">
+        <Section>
+            <Container>
+                <h1 class="text-white text-balance max-w-4xl relative">Outdoor Powersports Service &amp; Repair</h1>
+            </Container>
+
+            <Container mobilePadding={false} size="xlarge" classes="relative z-10">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:h-100 xl:h-150">
+                    {
+                        [...Array(3)].map((_, index) => (
+                            <div class="flex flex-row hover:cursor-pointer md:flex-col lg:justify-center sm:items-center relative group gap-6">
+                                <img src="https://imgix.cosmicjs.com/ad0c1080-d160-11f0-b20e-1d251587b0cd-vikram-sundaramoorthy-pd8CfO07lBU-unsplash.jpg?w=1500" class="h-full w-1/3 md:w-full object-cover shadow-2xl rounded-lg lg:absolute" />
+                                <div class="hidden lg:block absolute lg:inset-0 bg-radial from-black via-black/70 to-black/20 opacity-90 group-hover:opacity-80 duration-300 transition-all w-full h-full rounded-lg" />
+
+                                <div class="flex flex-col lg:items-center lg:text-center space-y-2 z-10 lg:p-6">
+                                    <h2 class="h4">Dirt Bikes</h2>
+                                    <div class="text-sm sm:text-base text-mongoose-100 lg:text-balance xl:w-sm">We provide expert maintenance, repair, and performance tuning for dirtbikes at our outdoor powersports shop.</div>
+                                </div>
+                            </div>
+                        ))
+                    }
+                </div>
+            </Container>
+
+            <Container>
+                <div class="grid grid-cols-12 gap-y-8 md:gap-12">
+                    <div class="col-span-12 md:col-span-4 xl:col-span-3 flex flex-col space-y-6">
+                        <h2 class="heading-underline">Services</h2>
+                        <p class="text-mongoose-100">If the specific service or repair you are looking for was not detailed in the list above, please remember that we offer a comprehensive range of maintenance and repair solutions that go well beyond the common examples provided.</p>
+                    </div>
+
+                    <div class="col-span-12 md:col-span-8 xl:col-span-8 columns-1 sm:columns-2 xl:columns-3 space-y-6 gap-6 lg:gap-8">
+                        {
+                            service.map((s) => (
+                                <div class="space-y-1 h-full break-inside-avoid-column">
+                                    <div class="font-medium font-heading text-mongoose-50 text-lg tracking-tight leading-tight uppercase">{s.title}</div>
+                                    <div class="text-mongoose-100 text-sm font-light">{s.description}</div>
+                                </div>
+                            ))
+                        }
+                    </div>
+
+                    <div class="col-span-12 w-fit place-self-center button button-ghost button-inverse">Book Your Service!</div>
+                </div>
+            </Container>
+
+            <Container>
+                <div class="space-y-8 md:space-y-16">
+                    <h2 class="heading-underline">Recent Services</h2>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
+                        {[...Array(4)].map((_, index) => <ServiceDetail />)}
+                    </div>
+                </div>
+            </Container>
+        </Section>
+    </div>
+</MainLayout>
